@@ -1,0 +1,268 @@
+ERROR - 2023-10-04 13:41:00 --> ErrorException: pg_query(): Query failed: ERROR:  missing FROM-clause entry for table &quot;tb_rencana&quot;
+LINE 3: ...rasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kode_rencana&quot; = &quot;tb_rencan...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #172, 'SELECT "tb_prov...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_prov...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_prov...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_prov...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\Home.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-04 13:41:00 --> pg_query(): Query failed: ERROR:  missing FROM-clause entry for table &quot;tb_rencana&quot;
+LINE 3: ...rasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kode_rencana&quot; = &quot;tb_rencan...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  missing FROM-clause entry for table &quot;tb_rencana&quot;
+LINE 3: ...rasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kode_rencana&quot; = &quot;tb_rencan...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_khg"."nama" as "namakhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_sub_khg"."nama_sub_khg" as "namasubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_hru"."nama_hru" as "namahru", "luas"
+FROM "tb_prov"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_sub_tindakan_restorasi" = "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_khg"."nama" as "namakhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_sub_khg"."nama_sub_khg" as "namasubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_hru"."nama_hru" as "namahru", "luas"
+FROM "tb_prov"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_sub_tindakan_restorasi" = "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_khg"."nama" as "namakhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_sub_khg"."nama_sub_khg" as "namasubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_hru"."nama_hru" as "namahru", "luas"
+FROM "tb_prov"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_sub_tindakan_restorasi" = "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_khg"."nama" as "namakhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_sub_khg"."nama_sub_khg" as "namasubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_hru"."nama_hru" as "namahru", "luas"
+FROM "tb_prov"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_sub_tindakan_restorasi" = "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi"', [], false)
+ 6 APPPATH\Controllers\Home.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-04 13:43:02 --> ErrorException: pg_query(): Query failed: ERROR:  column reference &quot;luas&quot; is ambiguous
+LINE 1: ..._hru&quot; as &quot;kodehru&quot;, &quot;tb_hru&quot;.&quot;nama_hru&quot; as &quot;namahru&quot;, &quot;luas&quot;
+                                                                 ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_prov...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_prov...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_prov...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_prov...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\Home.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-04 13:43:02 --> pg_query(): Query failed: ERROR:  column reference &quot;luas&quot; is ambiguous
+LINE 1: ..._hru&quot; as &quot;kodehru&quot;, &quot;tb_hru&quot;.&quot;nama_hru&quot; as &quot;namahru&quot;, &quot;luas&quot;
+                                                                 ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column reference &quot;luas&quot; is ambiguous
+LINE 1: ..._hru&quot; as &quot;kodehru&quot;, &quot;tb_hru&quot;.&quot;nama_hru&quot; as &quot;namahru&quot;, &quot;luas&quot;
+                                                                 ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_khg"."nama" as "namakhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_sub_khg"."nama_sub_khg" as "namasubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_hru"."nama_hru" as "namahru", "luas"
+FROM "tb_prov"
+JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg" = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg" = "tb_sub_khg"."kode_sub_khg"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_khg"."nama" as "namakhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_sub_khg"."nama_sub_khg" as "namasubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_hru"."nama_hru" as "namahru", "luas"
+FROM "tb_prov"
+JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg" = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg" = "tb_sub_khg"."kode_sub_khg"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_khg"."nama" as "namakhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_sub_khg"."nama_sub_khg" as "namasubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_hru"."nama_hru" as "namahru", "luas"
+FROM "tb_prov"
+JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg" = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg" = "tb_sub_khg"."kode_sub_khg"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_khg"."nama" as "namakhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_sub_khg"."nama_sub_khg" as "namasubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_hru"."nama_hru" as "namahru", "luas"
+FROM "tb_prov"
+JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg" = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg" = "tb_sub_khg"."kode_sub_khg"', [], false)
+ 6 APPPATH\Controllers\Home.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-04 13:48:49 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;tb_prov.nama_prov&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT &quot;tb_prov&quot;.&quot;kode_prov&quot; as &quot;kodeprov&quot;, &quot;tb_prov&quot;.&quot;nama_...
+                                                    ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #172, 'SELECT "tb_prov...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_prov...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_prov...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_prov...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\Home.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-04 13:48:49 --> pg_query(): Query failed: ERROR:  column &quot;tb_prov.nama_prov&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT &quot;tb_prov&quot;.&quot;kode_prov&quot; as &quot;kodeprov&quot;, &quot;tb_prov&quot;.&quot;nama_...
+                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;tb_prov.nama_prov&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT &quot;tb_prov&quot;.&quot;kode_prov&quot; as &quot;kodeprov&quot;, &quot;tb_prov&quot;.&quot;nama_...
+                                                    ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."nama_prov", COUNT(DISTINCT tb_khg.id) as total_khg, COUNT(DISTINCT tb_sub_khg.id) as total_sub_khg, COUNT(DISTINCT tb_hru.id) as total_hru
+FROM "tb_prov"
+LEFT JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+LEFT JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg" = "tb_khg"."kode_khg"
+LEFT JOIN "tb_hru" ON "tb_hru"."kode_sub_khg" = "tb_sub_khg"."kode_sub_khg"
+GROUP BY "tb_prov"."kode_prov"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."nama_prov", COUNT(DISTINCT tb_khg.id) as total_khg, COUNT(DISTINCT tb_sub_khg.id) as total_sub_khg, COUNT(DISTINCT tb_hru.id) as total_hru
+FROM "tb_prov"
+LEFT JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+LEFT JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg" = "tb_khg"."kode_khg"
+LEFT JOIN "tb_hru" ON "tb_hru"."kode_sub_khg" = "tb_sub_khg"."kode_sub_khg"
+GROUP BY "tb_prov"."kode_prov"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."nama_prov", COUNT(DISTINCT tb_khg.id) as total_khg, COUNT(DISTINCT tb_sub_khg.id) as total_sub_khg, COUNT(DISTINCT tb_hru.id) as total_hru
+FROM "tb_prov"
+LEFT JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+LEFT JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg" = "tb_khg"."kode_khg"
+LEFT JOIN "tb_hru" ON "tb_hru"."kode_sub_khg" = "tb_sub_khg"."kode_sub_khg"
+GROUP BY "tb_prov"."kode_prov"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."nama_prov", COUNT(DISTINCT tb_khg.id) as total_khg, COUNT(DISTINCT tb_sub_khg.id) as total_sub_khg, COUNT(DISTINCT tb_hru.id) as total_hru
+FROM "tb_prov"
+LEFT JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+LEFT JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg" = "tb_khg"."kode_khg"
+LEFT JOIN "tb_hru" ON "tb_hru"."kode_sub_khg" = "tb_sub_khg"."kode_sub_khg"
+GROUP BY "tb_prov"."kode_prov"', [], false)
+ 6 APPPATH\Controllers\Home.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-04 14:00:32 --> Undefined variable $khg
+in APPPATH\Views\pages\gamb-dashboard.php on line 652.
+ 1 APPPATH\Views\pages\gamb-dashboard.php(652): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $khg', 'APPPATH\\Views\\pages\\gamb-dashboard.php', 652)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gamb-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gamb-dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(39): view('pages/gamb-dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-04 14:01:48 --> Undefined variable $kodeprov
+in APPPATH\Views\pages\gamb-dashboard.php on line 661.
+ 1 APPPATH\Views\pages\gamb-dashboard.php(661): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kodeprov', 'APPPATH\\Views\\pages\\gamb-dashboard.php', 661)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gamb-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gamb-dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(42): view('pages/gamb-dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-04 15:27:22 --> Undefined variable $data_treemap
+in APPPATH\Views\pages\gamb-dashboard.php on line 930.
+ 1 APPPATH\Views\pages\gamb-dashboard.php(930): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_treemap', 'APPPATH\\Views\\pages\\gamb-dashboard.php', 930)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gamb-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gamb-dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(78): view('pages/gamb-dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-04 15:32:11 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_khg.luas_khg does not exist
+LINE 1: ...e_prov&quot; as &quot;kodeprov&quot;, &quot;tb_prov&quot;.&quot;nama_prov&quot;, SUM(tb_khg.lua...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_prov...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_prov...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_prov...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_prov...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\Home.php(55): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-04 15:32:11 --> pg_query(): Query failed: ERROR:  column tb_khg.luas_khg does not exist
+LINE 1: ...e_prov&quot; as &quot;kodeprov&quot;, &quot;tb_prov&quot;.&quot;nama_prov&quot;, SUM(tb_khg.lua...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_khg.luas_khg does not exist
+LINE 1: ...e_prov&quot; as &quot;kodeprov&quot;, &quot;tb_prov&quot;.&quot;nama_prov&quot;, SUM(tb_khg.lua...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."nama_prov", SUM(tb_khg.luas_khg) as total_khg_luas
+FROM "tb_prov"
+LEFT JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+GROUP BY "tb_prov"."kode_prov", "tb_prov"."nama_prov"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."nama_prov", SUM(tb_khg.luas_khg) as total_khg_luas
+FROM "tb_prov"
+LEFT JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+GROUP BY "tb_prov"."kode_prov", "tb_prov"."nama_prov"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."nama_prov", SUM(tb_khg.luas_khg) as total_khg_luas
+FROM "tb_prov"
+LEFT JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+GROUP BY "tb_prov"."kode_prov", "tb_prov"."nama_prov"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."nama_prov", SUM(tb_khg.luas_khg) as total_khg_luas
+FROM "tb_prov"
+LEFT JOIN "tb_khg" ON "tb_khg"."kode_prov" = "tb_prov"."kode_prov"
+GROUP BY "tb_prov"."kode_prov", "tb_prov"."nama_prov"', [], false)
+ 6 APPPATH\Controllers\Home.php(55): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-04 15:32:23 --> Undefined array key "total_hru_luas"
+in APPPATH\Controllers\Home.php on line 62.
+ 1 APPPATH\Controllers\Home.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total_hru_luas"', 'APPPATH\\Controllers\\Home.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-04 15:42:50 --> Undefined array key "name"
+in APPPATH\Controllers\Home.php on line 65.
+ 1 APPPATH\Controllers\Home.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'APPPATH\\Controllers\\Home.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-04 15:43:53 --> Undefined array key "value"
+in APPPATH\Controllers\Home.php on line 66.
+ 1 APPPATH\Controllers\Home.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "value"', 'APPPATH\\Controllers\\Home.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-04 19:56:38 --> Undefined variable $data_series
+in APPPATH\Views\pages\gamb-dashboard.php on line 929.
+ 1 APPPATH\Views\pages\gamb-dashboard.php(929): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_series', 'APPPATH\\Views\\pages\\gamb-dashboard.php', 929)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gamb-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gamb-dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('pages/gamb-dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

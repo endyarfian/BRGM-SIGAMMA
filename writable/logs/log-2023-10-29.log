@@ -1,0 +1,559 @@
+CRITICAL - 2023-10-29 02:49:05 --> Call to a member function getClientExtension() on null
+in APPPATH\Controllers\AdmGambutRencana.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutRencana->upload()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutRencana))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-29 03:01:33 --> Kode rencana sudah ada di database: 234
+CRITICAL - 2023-10-29 03:55:19 --> Undefined variable $var
+in APPPATH\Views\database\admin\gamb-dokumen.php on line 611.
+ 1 APPPATH\Views\database\admin\gamb-dokumen.php(611): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $var', 'APPPATH\\Views\\database\\admin\\gamb-dokumen.php', 611)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\admin\\gamb-dokumen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/admin/gamb-dokumen', [], true)
+ 5 APPPATH\Controllers\AdmGambutRencana.php(22): view('database/admin/gamb-dokumen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutRencana->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutRencana))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-29 06:31:46 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_prov_kode_prov_key&quot;
+DETAIL:  Key (kode_prov)=(PAPUA) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'UPDATE "tb_prov...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_prov...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_prov...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_prov...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(657): CodeIgniter\Model->update('8', Array)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutAdministrasi.php(84): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutAdministrasi->edit_prov('8')
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutAdministrasi))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-29 06:31:46 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_prov_kode_prov_key&quot;
+DETAIL:  Key (kode_prov)=(PAPUA) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_prov_kode_prov_key&quot;
+DETAIL:  Key (kode_prov)=(PAPUA) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'UPDATE "tb_prov" SET "kode_prov" = \'PAPUA\', "nama_prov" = \'Kalimantan Tengah\'
+WHERE "tb_prov"."id" IN (\'8\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_prov" SET "kode_prov" = \'PAPUA\', "nama_prov" = \'Kalimantan Tengah\'
+WHERE "tb_prov"."id" IN (\'8\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_prov" SET "kode_prov" = \'PAPUA\', "nama_prov" = \'Kalimantan Tengah\'
+WHERE "tb_prov"."id" IN (\'8\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_prov" SET "kode_prov" = :kode_prov:, "nama_prov" = :nama_prov:
+WHERE "tb_prov"."id" IN :tb_prov.id:', [...], false)
+ 6 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 9 SYSTEMPATH\BaseModel.php(657): CodeIgniter\Model->update('8', [...])
+10 APPPATH\Controllers\AdmGambutAdministrasi.php(84): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutAdministrasi->edit_prov('8')
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutAdministrasi))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-29 06:33:12 --> Kode UPRG sudah ada di database: KALBAR
+ERROR - 2023-10-29 06:33:12 --> Kode UPRG sudah ada di database: KALSEL
+ERROR - 2023-10-29 06:33:12 --> Kode UPRG sudah ada di database: KALTENG
+ERROR - 2023-10-29 06:33:12 --> Kode UPRG sudah ada di database: PAPUA
+ERROR - 2023-10-29 06:33:12 --> Kode UPRG sudah ada di database: RIAU
+ERROR - 2023-10-29 06:33:12 --> Kode UPRG sudah ada di database: SUMSEL
+ERROR - 2023-10-29 06:33:12 --> Kode UPRG sudah ada di database: JAMBI
+ERROR - 2023-10-29 07:14:31 --> Kode provinsi tidak ditemukan di tabel referensi: KULON PROGO
+ERROR - 2023-10-29 07:14:31 --> Kode provinsi tidak ditemukan di tabel referensi: SLEMAN
+ERROR - 2023-10-29 07:14:31 --> Kode provinsi tidak ditemukan di tabel referensi: BANTUL
+ERROR - 2023-10-29 07:14:31 --> Kode provinsi tidak ditemukan di tabel referensi: GUNUNG KIDUL
+ERROR - 2023-10-29 07:14:31 --> Kode provinsi tidak ditemukan di tabel referensi: SENTANI
+ERROR - 2023-10-29 07:14:31 --> Kode provinsi tidak ditemukan di tabel referensi: WAROPEN
+ERROR - 2023-10-29 07:14:31 --> Kode provinsi tidak ditemukan di tabel referensi: MANOKWARI
+ERROR - 2023-10-29 07:17:36 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_kec_kode_kec_key&quot;
+DETAIL:  Key (kode_kec)=(PAKM) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'UPDATE "tb_kec"...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_kec"...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_kec"...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_kec"...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(657): CodeIgniter\Model->update('19', Array)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKabkot.php(89): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKabkot->edit_kec('5', '19')
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKabkot))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-29 07:17:36 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_kec_kode_kec_key&quot;
+DETAIL:  Key (kode_kec)=(PAKM) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_kec_kode_kec_key&quot;
+DETAIL:  Key (kode_kec)=(PAKM) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'UPDATE "tb_kec" SET "kode_kec" = \'PAKM\', "nama_kec" = \'asd\', "kode_kabkot" = \'SLMN\'
+WHERE "tb_kec"."id" IN (\'19\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_kec" SET "kode_kec" = \'PAKM\', "nama_kec" = \'asd\', "kode_kabkot" = \'SLMN\'
+WHERE "tb_kec"."id" IN (\'19\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_kec" SET "kode_kec" = \'PAKM\', "nama_kec" = \'asd\', "kode_kabkot" = \'SLMN\'
+WHERE "tb_kec"."id" IN (\'19\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_kec" SET "kode_kec" = :kode_kec:, "nama_kec" = :nama_kec:, "kode_kabkot" = :kode_kabkot:
+WHERE "tb_kec"."id" IN :tb_kec.id:', [...], false)
+ 6 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 9 SYSTEMPATH\BaseModel.php(657): CodeIgniter\Model->update('19', [...])
+10 APPPATH\Controllers\AdmGambutKabkot.php(89): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKabkot->edit_kec('5', '19')
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKabkot))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-29 07:35:16 --> Kode kabupaten/kota tidak ditemukan di tabel referensi: PAKEM
+ERROR - 2023-10-29 07:35:16 --> Kode kabupaten/kota tidak ditemukan di tabel referensi: TEMPEL
+ERROR - 2023-10-29 07:35:16 --> Kode kabupaten/kota tidak ditemukan di tabel referensi: PAJANGAN
+ERROR - 2023-10-29 07:35:16 --> Kode kabupaten/kota tidak ditemukan di tabel referensi: KASIHAN
+ERROR - 2023-10-29 07:35:16 --> Kode kabupaten/kota tidak ditemukan di tabel referensi: IMOGIRI
+ERROR - 2023-10-29 07:35:16 --> Kode kabupaten/kota tidak ditemukan di tabel referensi: TURI
+ERROR - 2023-10-29 07:35:16 --> Kode kabupaten/kota tidak ditemukan di tabel referensi: NGAGLIK
+ERROR - 2023-10-29 07:35:16 --> Kode kabupaten/kota tidak ditemukan di tabel referensi: PATHUK
+ERROR - 2023-10-29 07:35:16 --> Kode kabupaten/kota tidak ditemukan di tabel referensi: SEMANU
+ERROR - 2023-10-29 07:35:16 --> Kode kabupaten/kota tidak ditemukan di tabel referensi: PLAYEN
+ERROR - 2023-10-29 07:35:16 --> Kode kabupaten/kota tidak ditemukan di tabel referensi: WONOSARI
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: CANDIBINANGUN
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: PURWOBINANGUN
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: HARJOBINANGUN
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: MERDIKOREJO
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: LUMBUNGREJO
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: MARGOREJO
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: WONOKERTO
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: BANGUNKERTO
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: DONOKERTO
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: SARDONOHARJO
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: SARIHARJO
+ERROR - 2023-10-29 07:57:12 --> Kode kecamatan tidak ditemukan di tabel referensi: DONOHARJO
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: CANDIBINANGUN
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: PURWOBINANGUN
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: HARJOBINANGUN
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: MERDIKOREJO
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: LUMBUNGREJO
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: MARGOREJO
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: WONOKERTO
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: BANGUNKERTO
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: DONOKERTO
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: SARDONOHARJO
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: SARIHARJO
+ERROR - 2023-10-29 07:58:02 --> Kode kecamatan tidak ditemukan di tabel referensi: DONOHARJO
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: CANDIBINANGUN
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: PURWOBINANGUN
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: HARJOBINANGUN
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: MERDIKOREJO
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: LUMBUNGREJO
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: MARGOREJO
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: WONOKERTO
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: BANGUNKERTO
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: DONOKERTO
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: SARDONOHARJO
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: SARIHARJO
+ERROR - 2023-10-29 07:58:38 --> Kode kecamatan tidak ditemukan di tabel referensi: DONOHARJO
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: CANDIBINANGUN
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: PURWOBINANGUN
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: HARJOBINANGUN
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: MERDIKOREJO
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: LUMBUNGREJO
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: MARGOREJO
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: WONOKERTO
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: BANGUNKERTO
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: DONOKERTO
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: SARDONOHARJO
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: SARIHARJO
+ERROR - 2023-10-29 07:59:58 --> Kode kecamatan tidak ditemukan di tabel referensi: DONOHARJO
+ERROR - 2023-10-29 08:01:52 --> Kode kecamatan tidak ditemukan di tabel referensi: WONOKERTO
+ERROR - 2023-10-29 08:01:52 --> Kode kecamatan tidak ditemukan di tabel referensi: BANGUNKERTO
+ERROR - 2023-10-29 08:01:52 --> Kode kecamatan tidak ditemukan di tabel referensi: DONOKERTO
+ERROR - 2023-10-29 08:03:06 --> Kode kecamatan tidak ditemukan di tabel referensi: WONOKERTO
+ERROR - 2023-10-29 08:03:06 --> Kode kecamatan tidak ditemukan di tabel referensi: BANGUNKERTO
+ERROR - 2023-10-29 08:03:06 --> Kode kecamatan tidak ditemukan di tabel referensi: DONOKERTO
+ERROR - 2023-10-29 08:04:30 --> Kode kecamatan sudah ada di database: BGKT
+ERROR - 2023-10-29 08:07:08 --> Kode kecamatan sudah ada di database: BGKT
+ERROR - 2023-10-29 08:12:30 --> Kode kecamatan sudah ada di database: PAKM
+ERROR - 2023-10-29 08:12:30 --> Kode kecamatan sudah ada di database: TMPL
+ERROR - 2023-10-29 08:14:30 --> Kode kabupaten/kota sudah ada di database: KLPG
+ERROR - 2023-10-29 08:14:30 --> Kode kabupaten/kota sudah ada di database: SLMN
+ERROR - 2023-10-29 08:14:30 --> Kode kabupaten/kota sudah ada di database: BNTL
+ERROR - 2023-10-29 08:16:05 --> Kode UPRG sudah ada di database: KALTENG
+ERROR - 2023-10-29 08:16:05 --> Kode UPRG sudah ada di database: PAPUA
+ERROR - 2023-10-29 08:16:05 --> Kode UPRG sudah ada di database: RIAU
+ERROR - 2023-10-29 08:16:05 --> Kode UPRG sudah ada di database: SUMSEL
+ERROR - 2023-10-29 08:33:02 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_lemdes_kode_lemdes_key&quot;
+DETAIL:  Key (kode_lemdes)=(SRHJ-01) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'UPDATE "tb_lemd...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_lemd...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_lemd...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_lemd...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(657): CodeIgniter\Model->update('1', Array)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKelembagaan.php(106): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKelembagaan->edit_lemdes('1')
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKelembagaan))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-29 08:33:02 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_lemdes_kode_lemdes_key&quot;
+DETAIL:  Key (kode_lemdes)=(SRHJ-01) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_lemdes_kode_lemdes_key&quot;
+DETAIL:  Key (kode_lemdes)=(SRHJ-01) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'UPDATE "tb_lemdes" SET "kode_desa" = \'LMBG\', "kode_lemdes" = \'SRHJ-01\', "nama_lemdes" = \'BANGUNTANI\', "jenis_lemdes" = \'KELOMPOK TANI\', "jumlah_anggota" = \'20\', "pj" = \'SUPAR\', "tlpn" = \'23135487\'
+WHERE "tb_lemdes"."id" IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_lemdes" SET "kode_desa" = \'LMBG\', "kode_lemdes" = \'SRHJ-01\', "nama_lemdes" = \'BANGUNTANI\', "jenis_lemdes" = \'KELOMPOK TANI\', "jumlah_anggota" = \'20\', "pj" = \'SUPAR\', "tlpn" = \'23135487\'
+WHERE "tb_lemdes"."id" IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_lemdes" SET "kode_desa" = \'LMBG\', "kode_lemdes" = \'SRHJ-01\', "nama_lemdes" = \'BANGUNTANI\', "jenis_lemdes" = \'KELOMPOK TANI\', "jumlah_anggota" = \'20\', "pj" = \'SUPAR\', "tlpn" = \'23135487\'
+WHERE "tb_lemdes"."id" IN (\'1\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_lemdes" SET "kode_desa" = :kode_desa:, "kode_lemdes" = :kode_lemdes:, "nama_lemdes" = :nama_lemdes:, "jenis_lemdes" = :jenis_lemdes:, "jumlah_anggota" = :jumlah_anggota:, "pj" = :pj:, "tlpn" = :tlpn:
+WHERE "tb_lemdes"."id" IN :tb_lemdes.id:', [...], false)
+ 6 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 9 SYSTEMPATH\BaseModel.php(657): CodeIgniter\Model->update('1', [...])
+10 APPPATH\Controllers\AdmGambutKelembagaan.php(106): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKelembagaan->edit_lemdes('1')
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKelembagaan))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-29 08:35:54 --> Kode lembaga desa sudah ada di database: BNKT-1
+ERROR - 2023-10-29 08:35:54 --> Kode lembaga desa sudah ada di database: LMBG-01
+ERROR - 2023-10-29 08:35:54 --> Kode lembaga desa sudah ada di database: SRHJ-02
+ERROR - 2023-10-29 08:35:54 --> Kode lembaga desa sudah ada di database: WNKT-02
+ERROR - 2023-10-29 11:21:15 --> Kode UPRG sudah ada di database: BNKT-UPRG-1
+ERROR - 2023-10-29 11:21:15 --> Kode UPRG sudah ada di database: UPRG-03
+ERROR - 2023-10-29 11:37:26 --> Kode KHG sudah ada di database: KHG.16.07.02
+ERROR - 2023-10-29 11:37:26 --> Kode KHG sudah ada di database: KHG.14.06-07.01
+ERROR - 2023-10-29 11:52:29 --> Kode KHG sudah ada di database: KHG.16.07.02
+ERROR - 2023-10-29 11:52:29 --> Kode KHG sudah ada di database: KHG.14.06-07.01
+ERROR - 2023-10-29 11:52:29 --> Kode KHG sudah ada di database: KHG.15.02-03.01
+ERROR - 2023-10-29 11:52:29 --> Kode KHG sudah ada di database: KHG.14.03.02
+ERROR - 2023-10-29 11:52:29 --> Kode KHG sudah ada di database: KHG.14.10.01
+ERROR - 2023-10-29 11:52:29 --> Kode KHG sudah ada di database: KHG.14.10.04
+ERROR - 2023-10-29 11:52:29 --> Kode KHG sudah ada di database: KHG.14.03.01
+ERROR - 2023-10-29 11:52:29 --> Kode KHG sudah ada di database: KHG.14.10.03
+ERROR - 2023-10-29 11:58:18 --> Kode KHG sudah ada di database: KHG.16.07.02
+ERROR - 2023-10-29 11:58:18 --> Kode KHG sudah ada di database: KHG.14.06-07.01
+ERROR - 2023-10-29 11:58:18 --> Kode KHG sudah ada di database: KHG.15.02-03.01
+ERROR - 2023-10-29 11:58:18 --> Kode KHG sudah ada di database: KHG.14.03.02
+ERROR - 2023-10-29 11:58:18 --> Kode KHG sudah ada di database: KHG.14.10.01
+ERROR - 2023-10-29 11:58:18 --> Kode KHG sudah ada di database: KHG.14.10.04
+ERROR - 2023-10-29 11:58:18 --> Kode KHG sudah ada di database: KHG.14.03.01
+ERROR - 2023-10-29 11:58:18 --> Kode KHG sudah ada di database: KHG.14.10.03
+ERROR - 2023-10-29 11:59:50 --> Kode KHG sudah ada di database: KHG.16.07.02
+ERROR - 2023-10-29 11:59:50 --> Kode KHG sudah ada di database: KHG.14.06-07.01
+ERROR - 2023-10-29 11:59:50 --> Kode KHG sudah ada di database: KHG.15.02-03.01
+ERROR - 2023-10-29 11:59:50 --> Kode KHG sudah ada di database: KHG.14.03.02
+ERROR - 2023-10-29 11:59:50 --> Kode KHG sudah ada di database: KHG.14.10.01
+ERROR - 2023-10-29 11:59:50 --> Kode KHG sudah ada di database: KHG.14.10.04
+ERROR - 2023-10-29 11:59:50 --> Kode KHG sudah ada di database: KHG.14.03.01
+ERROR - 2023-10-29 11:59:50 --> Kode KHG sudah ada di database: KHG.14.10.03
+ERROR - 2023-10-29 12:05:03 --> Kode KHG sudah ada di database: KHG.16.07.02
+ERROR - 2023-10-29 12:05:03 --> Kode KHG sudah ada di database: KHG.14.06-07.01
+ERROR - 2023-10-29 12:05:03 --> Kode KHG sudah ada di database: KHG.15.02-03.01
+ERROR - 2023-10-29 12:05:03 --> Kode KHG sudah ada di database: KHG.14.03.02
+ERROR - 2023-10-29 12:05:03 --> Kode KHG sudah ada di database: KHG.14.10.01
+ERROR - 2023-10-29 12:05:03 --> Kode KHG sudah ada di database: KHG.14.10.04
+ERROR - 2023-10-29 12:05:03 --> Kode KHG sudah ada di database: KHG.14.03.01
+ERROR - 2023-10-29 12:05:03 --> Kode KHG sudah ada di database: KHG.14.10.03
+ERROR - 2023-10-29 12:05:03 --> Kode KHG sudah ada di database: KHG.00.00.00
+ERROR - 2023-10-29 12:14:05 --> Kode KHG sudah ada di database: KHG.00.00.00
+ERROR - 2023-10-29 12:42:28 --> Kode sub KHG sudah ada di database: KHG.62-63.01-II
+ERROR - 2023-10-29 12:51:23 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_hru_kode_hru_key&quot;
+DETAIL:  Key (kode_hru)=(123) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'UPDATE "tb_hru"...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_hru"...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_hru"...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_hru"...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(657): CodeIgniter\Model->update('15', Array)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSubKhg.php(120): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSubKhg->edit_hru('23', '15')
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubKhg))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-29 12:51:23 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_hru_kode_hru_key&quot;
+DETAIL:  Key (kode_hru)=(123) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_hru_kode_hru_key&quot;
+DETAIL:  Key (kode_hru)=(123) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'UPDATE "tb_hru" SET "kode_sub_khg" = \'KHG.16.07.02-I\', "kode_hru" = \'123\', "nama_hru" = \'123\', "satuan" = \'asd\', "luas" = \'123.00\'
+WHERE "tb_hru"."id" IN (\'15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_hru" SET "kode_sub_khg" = \'KHG.16.07.02-I\', "kode_hru" = \'123\', "nama_hru" = \'123\', "satuan" = \'asd\', "luas" = \'123.00\'
+WHERE "tb_hru"."id" IN (\'15\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_hru" SET "kode_sub_khg" = \'KHG.16.07.02-I\', "kode_hru" = \'123\', "nama_hru" = \'123\', "satuan" = \'asd\', "luas" = \'123.00\'
+WHERE "tb_hru"."id" IN (\'15\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_hru" SET "kode_sub_khg" = :kode_sub_khg:, "kode_hru" = :kode_hru:, "nama_hru" = :nama_hru:, "satuan" = :satuan:, "luas" = :luas:
+WHERE "tb_hru"."id" IN :tb_hru.id:', [...], false)
+ 6 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 9 SYSTEMPATH\BaseModel.php(657): CodeIgniter\Model->update('15', [...])
+10 APPPATH\Controllers\AdmGambutSubKhg.php(120): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubKhg->edit_hru('23', '15')
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubKhg))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-29 12:53:31 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.1
+ERROR - 2023-10-29 13:19:11 --> Kode sub tindakan restorasi sudah ada di database: 123
+CRITICAL - 2023-10-29 13:59:16 --> Undefined variable $nama_prov
+in APPPATH\Views\pages\gamb-dashboard.php on line 850.
+ 1 APPPATH\Views\pages\gamb-dashboard.php(850): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_prov', 'APPPATH\\Views\\pages\\gamb-dashboard.php', 850)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gamb-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gamb-dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(79): view('pages/gamb-dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->gambutdashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 19:49:29 --> Undefined array key "kode_prov"
+in APPPATH\Controllers\GrafikData.php on line 146.
+ 1 APPPATH\Controllers\GrafikData.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_prov"', 'APPPATH\\Controllers\\GrafikData.php', 146)
+ 2 APPPATH\Controllers\GrafikData.php(118): App\Controllers\GrafikData->countData([...], 'kode_prov', [...], 'kode_prov')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 19:51:58 --> Undefined array key "kode_prov"
+in APPPATH\Controllers\GrafikData.php on line 147.
+ 1 APPPATH\Controllers\GrafikData.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_prov"', 'APPPATH\\Controllers\\GrafikData.php', 147)
+ 2 APPPATH\Controllers\GrafikData.php(118): App\Controllers\GrafikData->countData([...], 'kode_prov', [...], 'kode_prov')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 19:51:59 --> Undefined array key "kode_prov"
+in APPPATH\Controllers\GrafikData.php on line 147.
+ 1 APPPATH\Controllers\GrafikData.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_prov"', 'APPPATH\\Controllers\\GrafikData.php', 147)
+ 2 APPPATH\Controllers\GrafikData.php(118): App\Controllers\GrafikData->countData([...], 'kode_prov', [...], 'kode_prov')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 19:52:01 --> Undefined array key "kode_prov"
+in APPPATH\Controllers\GrafikData.php on line 147.
+ 1 APPPATH\Controllers\GrafikData.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_prov"', 'APPPATH\\Controllers\\GrafikData.php', 147)
+ 2 APPPATH\Controllers\GrafikData.php(118): App\Controllers\GrafikData->countData([...], 'kode_prov', [...], 'kode_prov')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 19:52:01 --> Undefined array key "kode_prov"
+in APPPATH\Controllers\GrafikData.php on line 147.
+ 1 APPPATH\Controllers\GrafikData.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_prov"', 'APPPATH\\Controllers\\GrafikData.php', 147)
+ 2 APPPATH\Controllers\GrafikData.php(118): App\Controllers\GrafikData->countData([...], 'kode_prov', [...], 'kode_prov')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 20:00:21 --> Undefined array key "kode_kabkot"
+in APPPATH\Controllers\GrafikData.php on line 145.
+ 1 APPPATH\Controllers\GrafikData.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_kabkot"', 'APPPATH\\Controllers\\GrafikData.php', 145)
+ 2 APPPATH\Controllers\GrafikData.php(126): App\Controllers\GrafikData->countData([...], 'kode_kabkot', [...], 'kode_prov')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-29 20:07:00 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;tb_kabkot.kode_prov&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT COUNT(*) as jumlah, &quot;tb_kabkot&quot;.&quot;kode_prov&quot;
+                                   ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #174, 'SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\GrafikData.php(104): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-29 20:07:00 --> pg_query(): Query failed: ERROR:  column &quot;tb_kabkot.kode_prov&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT COUNT(*) as jumlah, &quot;tb_kabkot&quot;.&quot;kode_prov&quot;
+                                   ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;tb_kabkot.kode_prov&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT COUNT(*) as jumlah, &quot;tb_kabkot&quot;.&quot;kode_prov&quot;
+                                   ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT COUNT(*) as jumlah, "tb_kabkot"."kode_prov"
+FROM "tb_kec"
+LEFT JOIN "tb_kabkot" ON "tb_kabkot"."kode_kabkot" = "tb_kec"."kode_kabkot"
+GROUP BY "tb_kec"."kode_kabkot"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*) as jumlah, "tb_kabkot"."kode_prov"
+FROM "tb_kec"
+LEFT JOIN "tb_kabkot" ON "tb_kabkot"."kode_kabkot" = "tb_kec"."kode_kabkot"
+GROUP BY "tb_kec"."kode_kabkot"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) as jumlah, "tb_kabkot"."kode_prov"
+FROM "tb_kec"
+LEFT JOIN "tb_kabkot" ON "tb_kabkot"."kode_kabkot" = "tb_kec"."kode_kabkot"
+GROUP BY "tb_kec"."kode_kabkot"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) as jumlah, "tb_kabkot"."kode_prov"
+FROM "tb_kec"
+LEFT JOIN "tb_kabkot" ON "tb_kabkot"."kode_kabkot" = "tb_kec"."kode_kabkot"
+GROUP BY "tb_kec"."kode_kabkot"', [], false)
+ 6 APPPATH\Controllers\GrafikData.php(104): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 20:14:18 --> Undefined array key "kode_prov"
+in APPPATH\Controllers\GrafikData.php on line 148.
+ 1 APPPATH\Controllers\GrafikData.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_prov"', 'APPPATH\\Controllers\\GrafikData.php', 148)
+ 2 APPPATH\Controllers\GrafikData.php(125): App\Controllers\GrafikData->countData([...], 'kode_prov', [...], 'kode_prov')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-29 20:22:41 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;tb_prov.nama_prov&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT COUNT(*) as jumlah, &quot;tb_prov&quot;.&quot;nama_prov&quot;
+                                   ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\GrafikData.php(97): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-29 20:22:41 --> pg_query(): Query failed: ERROR:  column &quot;tb_prov.nama_prov&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT COUNT(*) as jumlah, &quot;tb_prov&quot;.&quot;nama_prov&quot;
+                                   ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;tb_prov.nama_prov&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT COUNT(*) as jumlah, &quot;tb_prov&quot;.&quot;nama_prov&quot;
+                                   ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT COUNT(*) as jumlah, "tb_prov"."nama_prov"
+FROM "tb_kabkot"
+LEFT JOIN "tb_prov" ON "tb_prov"."kode_prov" = "tb_kabkot"."kode_prov"
+GROUP BY "tb_prov"."kode_prov"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*) as jumlah, "tb_prov"."nama_prov"
+FROM "tb_kabkot"
+LEFT JOIN "tb_prov" ON "tb_prov"."kode_prov" = "tb_kabkot"."kode_prov"
+GROUP BY "tb_prov"."kode_prov"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) as jumlah, "tb_prov"."nama_prov"
+FROM "tb_kabkot"
+LEFT JOIN "tb_prov" ON "tb_prov"."kode_prov" = "tb_kabkot"."kode_prov"
+GROUP BY "tb_prov"."kode_prov"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) as jumlah, "tb_prov"."nama_prov"
+FROM "tb_kabkot"
+LEFT JOIN "tb_prov" ON "tb_prov"."kode_prov" = "tb_kabkot"."kode_prov"
+GROUP BY "tb_prov"."kode_prov"', [], false)
+ 6 APPPATH\Controllers\GrafikData.php(97): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 20:25:13 --> Undefined array key "kode_kabkot"
+in APPPATH\Controllers\GrafikData.php on line 149.
+ 1 APPPATH\Controllers\GrafikData.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_kabkot"', 'APPPATH\\Controllers\\GrafikData.php', 149)
+ 2 APPPATH\Controllers\GrafikData.php(129): App\Controllers\GrafikData->countData([...], 'kode_kabkot', [...], 'kode_prov')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 20:27:12 --> Undefined array key "kode_kabkot"
+in APPPATH\Controllers\GrafikData.php on line 149.
+ 1 APPPATH\Controllers\GrafikData.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_kabkot"', 'APPPATH\\Controllers\\GrafikData.php', 149)
+ 2 APPPATH\Controllers\GrafikData.php(129): App\Controllers\GrafikData->countData([...], 'kode_kabkot', [...], 'kode_kabkot')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 20:27:13 --> Undefined array key "kode_kabkot"
+in APPPATH\Controllers\GrafikData.php on line 149.
+ 1 APPPATH\Controllers\GrafikData.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_kabkot"', 'APPPATH\\Controllers\\GrafikData.php', 149)
+ 2 APPPATH\Controllers\GrafikData.php(129): App\Controllers\GrafikData->countData([...], 'kode_kabkot', [...], 'kode_kabkot')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 20:27:13 --> Undefined array key "kode_kabkot"
+in APPPATH\Controllers\GrafikData.php on line 149.
+ 1 APPPATH\Controllers\GrafikData.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_kabkot"', 'APPPATH\\Controllers\\GrafikData.php', 149)
+ 2 APPPATH\Controllers\GrafikData.php(129): App\Controllers\GrafikData->countData([...], 'kode_kabkot', [...], 'kode_kabkot')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 20:27:13 --> Undefined array key "kode_kabkot"
+in APPPATH\Controllers\GrafikData.php on line 149.
+ 1 APPPATH\Controllers\GrafikData.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_kabkot"', 'APPPATH\\Controllers\\GrafikData.php', 149)
+ 2 APPPATH\Controllers\GrafikData.php(129): App\Controllers\GrafikData->countData([...], 'kode_kabkot', [...], 'kode_kabkot')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 20:27:13 --> Undefined array key "kode_kabkot"
+in APPPATH\Controllers\GrafikData.php on line 149.
+ 1 APPPATH\Controllers\GrafikData.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_kabkot"', 'APPPATH\\Controllers\\GrafikData.php', 149)
+ 2 APPPATH\Controllers\GrafikData.php(129): App\Controllers\GrafikData->countData([...], 'kode_kabkot', [...], 'kode_kabkot')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 20:27:13 --> Undefined array key "kode_kabkot"
+in APPPATH\Controllers\GrafikData.php on line 149.
+ 1 APPPATH\Controllers\GrafikData.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_kabkot"', 'APPPATH\\Controllers\\GrafikData.php', 149)
+ 2 APPPATH\Controllers\GrafikData.php(129): App\Controllers\GrafikData->countData([...], 'kode_kabkot', [...], 'kode_kabkot')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-29 20:32:31 --> Undefined variable $db
+in APPPATH\Controllers\GrafikData.php on line 85.
+ 1 APPPATH\Controllers\GrafikData.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'APPPATH\\Controllers\\GrafikData.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikData->grafikgambut2()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikData))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

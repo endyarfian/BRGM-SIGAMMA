@@ -1,0 +1,354 @@
+ERROR - 2023-10-28 03:52:37 --> Kode sasaran sudah ada di database: 234.1
+ERROR - 2023-10-28 05:03:56 --> Kode target claim sudah ada di database:  234.1.1.2
+ERROR - 2023-10-28 05:03:56 --> Kode target intervensi tidak ditemukan di tabel referensi: 234.1.1.0
+ERROR - 2023-10-28 05:22:28 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_output_target_kode_output_target_key&quot;
+DETAIL:  Key (kode_output_target)=(234.1.2) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'UPDATE "tb_outp...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_outp...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_outp...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_outp...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(657): CodeIgniter\Model->update('1', Array)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSasaranInv.php(110): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSasaranInv->edit_sasaran_inv('7', '1')
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaranInv))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-28 05:22:28 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_output_target_kode_output_target_key&quot;
+DETAIL:  Key (kode_output_target)=(234.1.2) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_output_target_kode_output_target_key&quot;
+DETAIL:  Key (kode_output_target)=(234.1.2) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'UPDATE "tb_output_target" SET "kode_output_target" = \'234.1.2\', "kode_target" = \'234.2\', "kode_hru" = \'KHG.16.07.02-I.1\', "satuan" = \'Ha\', "volume" = \'123123\'
+WHERE "tb_output_target"."id" IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_output_target" SET "kode_output_target" = \'234.1.2\', "kode_target" = \'234.2\', "kode_hru" = \'KHG.16.07.02-I.1\', "satuan" = \'Ha\', "volume" = \'123123\'
+WHERE "tb_output_target"."id" IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_output_target" SET "kode_output_target" = \'234.1.2\', "kode_target" = \'234.2\', "kode_hru" = \'KHG.16.07.02-I.1\', "satuan" = \'Ha\', "volume" = \'123123\'
+WHERE "tb_output_target"."id" IN (\'1\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_output_target" SET "kode_output_target" = :kode_output_target:, "kode_target" = :kode_target:, "kode_hru" = :kode_hru:, "satuan" = :satuan:, "volume" = :volume:
+WHERE "tb_output_target"."id" IN :tb_output_target.id:', [...], false)
+ 6 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 9 SYSTEMPATH\BaseModel.php(657): CodeIgniter\Model->update('1', [...])
+10 APPPATH\Controllers\AdmGambutSasaranInv.php(110): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSasaranInv->edit_sasaran_inv('7', '1')
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaranInv))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-28 05:23:36 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;kode_outcome_target_kode_outcome_target_key&quot;
+DETAIL:  Key (kode_outcome_target)=( 234.1.1.3) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'UPDATE "tb_outc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_outc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_outc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_outc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(657): CodeIgniter\Model->update('4', Array)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSasaranClaim.php(101): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSasaranClaim->edit_sasaran_claim('1', '4')
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaranClaim))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-28 05:23:36 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;kode_outcome_target_kode_outcome_target_key&quot;
+DETAIL:  Key (kode_outcome_target)=( 234.1.1.3) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;kode_outcome_target_kode_outcome_target_key&quot;
+DETAIL:  Key (kode_outcome_target)=( 234.1.1.3) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'UPDATE "tb_outcome_target" SET "kode_outcome_target" = \' 234.1.1.3\', "kode_output_target" = \'234.1.1\', "satuan" = \'Ha\', "volume" = \'123.00\'
+WHERE "tb_outcome_target"."id" IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_outcome_target" SET "kode_outcome_target" = \' 234.1.1.3\', "kode_output_target" = \'234.1.1\', "satuan" = \'Ha\', "volume" = \'123.00\'
+WHERE "tb_outcome_target"."id" IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_outcome_target" SET "kode_outcome_target" = \' 234.1.1.3\', "kode_output_target" = \'234.1.1\', "satuan" = \'Ha\', "volume" = \'123.00\'
+WHERE "tb_outcome_target"."id" IN (\'4\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_outcome_target" SET "kode_outcome_target" = :kode_outcome_target:, "kode_output_target" = :kode_output_target:, "satuan" = :satuan:, "volume" = :volume:
+WHERE "tb_outcome_target"."id" IN :tb_outcome_target.id:', [...], false)
+ 6 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 9 SYSTEMPATH\BaseModel.php(657): CodeIgniter\Model->update('4', [...])
+10 APPPATH\Controllers\AdmGambutSasaranClaim.php(101): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSasaranClaim->edit_sasaran_claim('1', '4')
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaranClaim))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-28 06:00:02 --> Kode sasaran sudah ada di database: 234.1.1
+ERROR - 2023-10-28 06:00:02 --> Kode sasaran sudah ada di database: 234.1.2
+ERROR - 2023-10-28 06:00:02 --> Kode sasaran sudah ada di database: 234.1.3
+ERROR - 2023-10-28 06:00:02 --> Kode target tidak ditemukan di tabel referensi: 1
+ERROR - 2023-10-28 11:05:26 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type numeric: &quot;asdasdasd&quot;
+LINE 1: ...= 'KHG.16.07.02-I.2', &quot;satuan&quot; = 'ha', &quot;volume&quot; = 'asdasdasd...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'UPDATE "tb_outp...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_outp...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_outp...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_outp...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(657): CodeIgniter\Model->update('2', Array)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSasaranInv.php(122): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSasaranInv->edit_sasaran_inv('7', '2')
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaranInv))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-28 11:05:26 --> pg_query(): Query failed: ERROR:  invalid input syntax for type numeric: &quot;asdasdasd&quot;
+LINE 1: ...= 'KHG.16.07.02-I.2', &quot;satuan&quot; = 'ha', &quot;volume&quot; = 'asdasdasd...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type numeric: &quot;asdasdasd&quot;
+LINE 1: ...= \'KHG.16.07.02-I.2\', &quot;satuan&quot; = \'ha\', &quot;volume&quot; = \'asdasdasd...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'UPDATE "tb_output_target" SET "kode_output_target" = \'234.1.2\', "kode_target" = \'234.1\', "kode_hru" = \'KHG.16.07.02-I.2\', "satuan" = \'ha\', "volume" = \'asdasdasd\'
+WHERE "tb_output_target"."id" IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_output_target" SET "kode_output_target" = \'234.1.2\', "kode_target" = \'234.1\', "kode_hru" = \'KHG.16.07.02-I.2\', "satuan" = \'ha\', "volume" = \'asdasdasd\'
+WHERE "tb_output_target"."id" IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_output_target" SET "kode_output_target" = \'234.1.2\', "kode_target" = \'234.1\', "kode_hru" = \'KHG.16.07.02-I.2\', "satuan" = \'ha\', "volume" = \'asdasdasd\'
+WHERE "tb_output_target"."id" IN (\'2\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_output_target" SET "kode_output_target" = :kode_output_target:, "kode_target" = :kode_target:, "kode_hru" = :kode_hru:, "satuan" = :satuan:, "volume" = :volume:
+WHERE "tb_output_target"."id" IN :tb_output_target.id:', [...], false)
+ 6 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 9 SYSTEMPATH\BaseModel.php(657): CodeIgniter\Model->update('2', [...])
+10 APPPATH\Controllers\AdmGambutSasaranInv.php(122): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSasaranInv->edit_sasaran_inv('7', '2')
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaranInv))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-28 11:40:57 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_target_kode_target_key&quot;
+DETAIL:  Key (kode_target)=(234.2) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'UPDATE "tb_targ...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_targ...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_targ...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_targ...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(657): CodeIgniter\Model->update('7', Array)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSasaran.php(114): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSasaran->edit_sasaran('7', '7')
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaran))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-10-28 11:40:57 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_target_kode_target_key&quot;
+DETAIL:  Key (kode_target)=(234.2) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_target_kode_target_key&quot;
+DETAIL:  Key (kode_target)=(234.2) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'UPDATE "tb_target" SET "kode_rencana" = NULL, "kode_target" = \'234.2\', "volume" = \'123.00\', "satuan" = \'Ha\', "deskripsi" = \'asdasd asdasda asdasd adfdg asdasd asfasfasfasd Sdasd kjlkjas laksjdlauiashc lajsdlkjnalksj laksdlkjlkajskdj\'
+WHERE "tb_target"."id" IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tb_target" SET "kode_rencana" = NULL, "kode_target" = \'234.2\', "volume" = \'123.00\', "satuan" = \'Ha\', "deskripsi" = \'asdasd asdasda asdasd adfdg asdasd asfasfasfasd Sdasd kjlkjas laksjdlauiashc lajsdlkjnalksj laksdlkjlkajskdj\'
+WHERE "tb_target"."id" IN (\'7\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tb_target" SET "kode_rencana" = NULL, "kode_target" = \'234.2\', "volume" = \'123.00\', "satuan" = \'Ha\', "deskripsi" = \'asdasd asdasda asdasd adfdg asdasd asfasfasfasd Sdasd kjlkjas laksjdlauiashc lajsdlkjnalksj laksdlkjlkajskdj\'
+WHERE "tb_target"."id" IN (\'7\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE "tb_target" SET "kode_rencana" = :kode_rencana:, "kode_target" = :kode_target:, "volume" = :volume:, "satuan" = :satuan:, "deskripsi" = :deskripsi:
+WHERE "tb_target"."id" IN :tb_target.id:', [...], false)
+ 6 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 9 SYSTEMPATH\BaseModel.php(657): CodeIgniter\Model->update('7', [...])
+10 APPPATH\Controllers\AdmGambutSasaran.php(114): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSasaran->edit_sasaran('7', '7')
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaran))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-28 12:00:39 --> Kode rencana sudah ada di database: 234
+ERROR - 2023-10-28 12:11:41 --> Kode rencana kegiatan sudah ada di database: RTT2024.R11
+ERROR - 2023-10-28 12:11:41 --> Kode rencana kegiatan sudah ada di database: RTT2024.R112
+ERROR - 2023-10-28 12:11:41 --> Kode sub tindakan restorasi tidak ditemukan di tabel referensi: R44
+ERROR - 2023-10-28 12:11:41 --> Kode rencana kegiatan sudah ada di database: RTT2024.R11
+ERROR - 2023-10-28 12:12:50 --> Kode rencana kegiatan sudah ada di database: RTT2024.R11
+ERROR - 2023-10-28 12:12:50 --> Kode rencana kegiatan sudah ada di database: RTT2024.R112
+ERROR - 2023-10-28 12:12:50 --> Kode rencana kegiatan sudah ada di database: RTT2024.R113
+ERROR - 2023-10-28 12:12:50 --> Kode sub tindakan restorasi tidak ditemukan di tabel referensi: R44
+ERROR - 2023-10-28 12:12:50 --> Kode rencana kegiatan sudah ada di database: RTT2024.R11
+ERROR - 2023-10-28 12:13:06 --> Kode rencana kegiatan sudah ada di database: RTT2024.R11
+ERROR - 2023-10-28 12:13:06 --> Kode rencana kegiatan sudah ada di database: RTT2024.R112
+ERROR - 2023-10-28 12:13:06 --> Kode sub tindakan restorasi tidak ditemukan di tabel referensi: R44
+ERROR - 2023-10-28 12:13:06 --> Kode rencana kegiatan sudah ada di database: RTT2024.R11
+ERROR - 2023-10-28 12:41:07 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_kegiatan_kode_rencana_kegiatan_key&quot;
+DETAIL:  Key (kode_rencana_kegiatan)=(RTT2024.R11) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutAlokasi.php(290): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutAlokasi->upload('7')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutAlokasi))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-28 12:41:07 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_kegiatan_kode_rencana_kegiatan_key&quot;
+DETAIL:  Key (kode_rencana_kegiatan)=(RTT2024.R11) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_kegiatan_kode_rencana_kegiatan_key&quot;
+DETAIL:  Key (kode_rencana_kegiatan)=(RTT2024.R11) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_rencana_kegiatan" ("kode_rencana_kegiatan") VALUES (\'RTT2024.R11\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_rencana_kegiatan" ("kode_rencana_kegiatan") VALUES (\'RTT2024.R11\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_rencana_kegiatan" ("kode_rencana_kegiatan") VALUES (\'RTT2024.R11\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_rencana_kegiatan" ("kode_rencana_kegiatan") VALUES (:kode_rencana_kegiatan:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutAlokasi.php(290): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutAlokasi->upload('7')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutAlokasi))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-28 12:43:16 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_kegiatan_kode_rencana_kegiatan_key&quot;
+DETAIL:  Key (kode_rencana_kegiatan)=(RTT2024.R11) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutAlokasi.php(290): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutAlokasi->upload('7')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutAlokasi))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-28 12:43:16 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_kegiatan_kode_rencana_kegiatan_key&quot;
+DETAIL:  Key (kode_rencana_kegiatan)=(RTT2024.R11) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_kegiatan_kode_rencana_kegiatan_key&quot;
+DETAIL:  Key (kode_rencana_kegiatan)=(RTT2024.R11) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_rencana_kegiatan" ("kode_rencana_kegiatan") VALUES (\'RTT2024.R11\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_rencana_kegiatan" ("kode_rencana_kegiatan") VALUES (\'RTT2024.R11\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_rencana_kegiatan" ("kode_rencana_kegiatan") VALUES (\'RTT2024.R11\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_rencana_kegiatan" ("kode_rencana_kegiatan") VALUES (:kode_rencana_kegiatan:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutAlokasi.php(290): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutAlokasi->upload('7')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutAlokasi))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-28 12:43:49 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type numeric: &quot;Ha&quot;
+LINE 1: ...LMBG', 'KHG.16.07.02-I.2', 'SRHJ-01', '-', '123', 'Ha', 'mar...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutAlokasi.php(290): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutAlokasi->upload('7')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutAlokasi))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-28 12:43:49 --> pg_query(): Query failed: ERROR:  invalid input syntax for type numeric: &quot;Ha&quot;
+LINE 1: ...LMBG', 'KHG.16.07.02-I.2', 'SRHJ-01', '-', '123', 'Ha', 'mar...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type numeric: &quot;Ha&quot;
+LINE 1: ...LMBG\', \'KHG.16.07.02-I.2\', \'SRHJ-01\', \'-\', \'123\', \'Ha\', \'mar...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_alokasi" ("kode_alokasi", "jenis_alokasi", "kode_rencana_kegiatan", "kode_pelaksana", "kode_desa", "kode_hru", "kode_lemdes", "produk", "satuan", "volume", "pj", "deskripsi") VALUES (\'123\', \'asd\', \'RTT2024.R11\', \'UPRG-03\', \'LMBG\', \'KHG.16.07.02-I.2\', \'SRHJ-01\', \'-\', \'123\', \'Ha\', \'marjiyo\', \'asdasdasdasdasdasdasdasdasdas asdasdasd\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_alokasi" ("kode_alokasi", "jenis_alokasi", "kode_rencana_kegiatan", "kode_pelaksana", "kode_desa", "kode_hru", "kode_lemdes", "produk", "satuan", "volume", "pj", "deskripsi") VALUES (\'123\', \'asd\', \'RTT2024.R11\', \'UPRG-03\', \'LMBG\', \'KHG.16.07.02-I.2\', \'SRHJ-01\', \'-\', \'123\', \'Ha\', \'marjiyo\', \'asdasdasdasdasdasdasdasdasdas asdasdasd\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_alokasi" ("kode_alokasi", "jenis_alokasi", "kode_rencana_kegiatan", "kode_pelaksana", "kode_desa", "kode_hru", "kode_lemdes", "produk", "satuan", "volume", "pj", "deskripsi") VALUES (\'123\', \'asd\', \'RTT2024.R11\', \'UPRG-03\', \'LMBG\', \'KHG.16.07.02-I.2\', \'SRHJ-01\', \'-\', \'123\', \'Ha\', \'marjiyo\', \'asdasdasdasdasdasdasdasdasdas asdasdasd\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_alokasi" ("kode_alokasi", "jenis_alokasi", "kode_rencana_kegiatan", "kode_pelaksana", "kode_desa", "kode_hru", "kode_lemdes", "produk", "satuan", "volume", "pj", "deskripsi") VALUES (:kode_alokasi:, :jenis_alokasi:, :kode_rencana_kegiatan:, :kode_pelaksana:, :kode_desa:, :kode_hru:, :kode_lemdes:, :produk:, :satuan:, :volume:, :pj:, :deskripsi:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutAlokasi.php(290): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutAlokasi->upload('7')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutAlokasi))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-28 12:44:47 --> Kode rencana kegiatan tidak ditemukan di tabel referensi: xxx
+ERROR - 2023-10-28 12:44:47 --> Kode pelaksana tidak ditemukan di tabel referensi: xxx
+ERROR - 2023-10-28 12:44:47 --> Kode Desa tidak ditemukan di tabel referensi: xxx
+ERROR - 2023-10-28 12:44:47 --> Kode HRU tidak ditemukan di tabel referensi: xxx
+ERROR - 2023-10-28 12:44:47 --> Kode rencana kegiatan tidak ditemukan di tabel referensi: RTT2024.R12
+ERROR - 2023-10-28 12:45:08 --> Kode alokasi rencana kegiatan sudah ada di database: 123
+ERROR - 2023-10-28 12:45:08 --> Kode alokasi rencana kegiatan sudah ada di database: xxx
+ERROR - 2023-10-28 12:45:08 --> Kode rencana kegiatan tidak ditemukan di tabel referensi: xxx
+ERROR - 2023-10-28 12:45:08 --> Kode pelaksana tidak ditemukan di tabel referensi: xxx
+ERROR - 2023-10-28 12:45:08 --> Kode Desa tidak ditemukan di tabel referensi: xxx
+ERROR - 2023-10-28 12:45:08 --> Kode HRU tidak ditemukan di tabel referensi: xxx
+ERROR - 2023-10-28 12:45:08 --> Kode rencana kegiatan tidak ditemukan di tabel referensi: RTT2024.R12
+ERROR - 2023-10-28 14:46:59 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;SUPARJIONO&quot;
+LINE 1: ... ('BNKT-UPRG-1', 'Pemerintah', 'PT. MAJU MUNDUR', 'SUPARJION...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #174, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutRencana.php(161): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutRencana->upload()
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutRencana))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-28 14:46:59 --> pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;SUPARJIONO&quot;
+LINE 1: ... ('BNKT-UPRG-1', 'Pemerintah', 'PT. MAJU MUNDUR', 'SUPARJION...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;SUPARJIONO&quot;
+LINE 1: ... (\'BNKT-UPRG-1\', \'Pemerintah\', \'PT. MAJU MUNDUR\', \'SUPARJION...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_rencana" ("kode_rencana", "tipe_rencana", "judul", "tgl_berlaku", "tgl_berakhir", "pengesah") VALUES (\'BNKT-UPRG-1\', \'Pemerintah\', \'PT. MAJU MUNDUR\', \'SUPARJIONO\', \'13254987\', \'TURI, SLEMAN\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_rencana" ("kode_rencana", "tipe_rencana", "judul", "tgl_berlaku", "tgl_berakhir", "pengesah") VALUES (\'BNKT-UPRG-1\', \'Pemerintah\', \'PT. MAJU MUNDUR\', \'SUPARJIONO\', \'13254987\', \'TURI, SLEMAN\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_rencana" ("kode_rencana", "tipe_rencana", "judul", "tgl_berlaku", "tgl_berakhir", "pengesah") VALUES (\'BNKT-UPRG-1\', \'Pemerintah\', \'PT. MAJU MUNDUR\', \'SUPARJIONO\', \'13254987\', \'TURI, SLEMAN\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_rencana" ("kode_rencana", "tipe_rencana", "judul", "tgl_berlaku", "tgl_berakhir", "pengesah") VALUES (:kode_rencana:, :tipe_rencana:, :judul:, :tgl_berlaku:, :tgl_berakhir:, :pengesah:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutRencana.php(161): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutRencana->upload()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutRencana))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

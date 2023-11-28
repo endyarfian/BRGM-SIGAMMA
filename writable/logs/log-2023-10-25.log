@@ -1,0 +1,406 @@
+ERROR - 2023-10-25 07:04:52 --> Kode sub tindakan restorasi sudah ada di database: R1
+ERROR - 2023-10-25 07:04:52 --> Kode sub tindakan restorasi sudah ada di database: R2
+ERROR - 2023-10-25 07:04:52 --> Kode sub tindakan restorasi sudah ada di database: R3
+ERROR - 2023-10-25 07:07:10 --> Kode sub tindakan restorasi sudah ada di database: R1
+ERROR - 2023-10-25 07:07:10 --> Kode sub tindakan restorasi sudah ada di database: R2
+ERROR - 2023-10-25 07:07:10 --> Kode sub tindakan restorasi sudah ada di database: R3
+ERROR - 2023-10-25 07:07:38 --> Kode sub tindakan restorasi sudah ada di database: R1
+ERROR - 2023-10-25 07:07:38 --> Kode sub tindakan restorasi sudah ada di database: R2
+ERROR - 2023-10-25 07:09:46 --> Kode sub tindakan restorasi sudah ada di database: R1
+ERROR - 2023-10-25 07:09:46 --> Kode sub tindakan restorasi sudah ada di database: R2
+ERROR - 2023-10-25 07:09:46 --> Kode sub tindakan restorasi sudah ada di database: R3
+ERROR - 2023-10-25 07:10:18 --> Kode sub tindakan restorasi sudah ada di database: R1
+ERROR - 2023-10-25 07:10:18 --> Kode sub tindakan restorasi sudah ada di database: R2
+ERROR - 2023-10-25 07:10:18 --> Kode sub tindakan restorasi sudah ada di database: R3
+ERROR - 2023-10-25 07:59:34 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I
+ERROR - 2023-10-25 07:59:34 --> Kode sub KHG sudah ada di database: KHG.16.07.02-II
+ERROR - 2023-10-25 07:59:34 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(7) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-25 07:59:34 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(7) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(7) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (:kode_khg:, :kode_sub_khg:, :nama_sub_khg:, :luas:, :satuan:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-25 08:02:56 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(8) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-25 08:02:56 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(8) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(8) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (:kode_khg:, :kode_sub_khg:, :nama_sub_khg:, :luas:, :satuan:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-25 08:04:25 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(9) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-25 08:04:25 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(9) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(9) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (:kode_khg:, :kode_sub_khg:, :nama_sub_khg:, :luas:, :satuan:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-25 08:07:03 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I
+ERROR - 2023-10-25 08:07:03 --> Kode sub KHG sudah ada di database: KHG.16.07.02-II
+ERROR - 2023-10-25 08:07:03 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(10) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #174, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-25 08:07:03 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(10) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(10) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (:kode_khg:, :kode_sub_khg:, :nama_sub_khg:, :luas:, :satuan:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-25 08:11:29 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I
+ERROR - 2023-10-25 08:11:29 --> Kode sub KHG sudah ada di database: KHG.16.07.02-II
+ERROR - 2023-10-25 08:11:29 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(11) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-25 08:11:29 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(11) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(11) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (:kode_khg:, :kode_sub_khg:, :nama_sub_khg:, :luas:, :satuan:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-25 08:17:07 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I
+ERROR - 2023-10-25 08:17:07 --> Kode sub KHG sudah ada di database: KHG.16.07.02-II
+ERROR - 2023-10-25 08:17:07 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(12) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-25 08:17:07 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(12) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(12) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (:kode_khg:, :kode_sub_khg:, :nama_sub_khg:, :luas:, :satuan:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-25 08:24:59 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I
+ERROR - 2023-10-25 08:24:59 --> Kode sub KHG sudah ada di database: KHG.16.07.02-II
+ERROR - 2023-10-25 08:24:59 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(13) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-25 08:24:59 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(13) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(13) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (:kode_khg:, :kode_sub_khg:, :nama_sub_khg:, :luas:, :satuan:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutKhg.php(171): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-25 08:28:19 --> Kode sub tindakan restorasi sudah ada di database: R1
+ERROR - 2023-10-25 08:28:19 --> Kode sub tindakan restorasi sudah ada di database: R2
+ERROR - 2023-10-25 08:28:19 --> Kode sub tindakan restorasi sudah ada di database: R3
+ERROR - 2023-10-25 08:32:28 --> Kode sub tindakan restorasi sudah ada di database: R112
+ERROR - 2023-10-25 08:32:28 --> Kode sub tindakan restorasi sudah ada di database: r222
+ERROR - 2023-10-25 08:37:50 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I
+ERROR - 2023-10-25 08:37:50 --> Kode sub KHG sudah ada di database: KHG.16.07.02-II
+ERROR - 2023-10-25 08:37:50 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(14) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKhg.php(172): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-25 08:37:50 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(14) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_sub_khg_pkey&quot;
+DETAIL:  Key (id)=(14) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (\'KHG.16.07.02\', \'KHG.16.07.02-III\', \'asd\', \'1000\', \'Ha\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_sub_khg" ("kode_khg", "kode_sub_khg", "nama_sub_khg", "luas", "satuan") VALUES (:kode_khg:, :kode_sub_khg:, :nama_sub_khg:, :luas:, :satuan:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutKhg.php(172): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKhg->upload('1')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKhg))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-25 08:45:31 --> Kode KHG sudah ada di database: KHG.16.07.02
+ERROR - 2023-10-25 08:45:31 --> Kode KHG sudah ada di database: KHG.14.06-07.01
+ERROR - 2023-10-25 08:49:22 --> Kode KHG sudah ada di database: KHG.16.07.02
+ERROR - 2023-10-25 08:49:22 --> Kode KHG sudah ada di database: KHG.14.06-07.01
+ERROR - 2023-10-25 08:49:22 --> Kode KHG sudah ada di database: KHG.15.02-03.01.ASD
+ERROR - 2023-10-25 08:49:22 --> Kode KHG sudah ada di database: KHG.14.03.02.ASD
+ERROR - 2023-10-25 08:50:32 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I
+ERROR - 2023-10-25 08:50:32 --> Kode sub KHG sudah ada di database: KHG.16.07.02-II
+ERROR - 2023-10-25 08:50:32 --> Kode sub KHG sudah ada di database: KHG.16.07.02-III
+ERROR - 2023-10-25 08:50:32 --> Kode sub KHG sudah ada di database: KHG.16.07.02-IV
+ERROR - 2023-10-25 08:50:32 --> Kode sub KHG sudah ada di database: KHG.16.07.02-V
+ERROR - 2023-10-25 08:50:32 --> Kode sub KHG sudah ada di database: KHG.16.07.02-VI
+ERROR - 2023-10-25 09:06:55 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.9
+ERROR - 2023-10-25 09:07:10 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.1
+ERROR - 2023-10-25 09:07:10 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.2
+ERROR - 2023-10-25 09:07:10 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.3
+ERROR - 2023-10-25 09:07:10 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.4
+ERROR - 2023-10-25 09:07:10 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.5
+ERROR - 2023-10-25 09:07:10 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.6
+ERROR - 2023-10-25 09:07:10 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.7
+ERROR - 2023-10-25 09:07:10 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.8
+ERROR - 2023-10-25 09:07:10 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.9
+ERROR - 2023-10-25 09:07:10 --> Kode sub KHG sudah ada di database: KHG.16.07.02-I.9
+ERROR - 2023-10-25 09:51:35 --> Kode provinsi tidak ditemukan di tabel referensi: BNKT-UPRG-1
+ERROR - 2023-10-25 09:51:35 --> Kode provinsi tidak ditemukan di tabel referensi: UPRG-03
+ERROR - 2023-10-25 09:51:35 --> Kode provinsi tidak ditemukan di tabel referensi: UPRG-04
+ERROR - 2023-10-25 09:51:49 --> Kode provinsi tidak ditemukan di tabel referensi: BNKT-UPRG-1
+ERROR - 2023-10-25 09:51:49 --> Kode provinsi tidak ditemukan di tabel referensi: UPRG-03
+ERROR - 2023-10-25 09:51:49 --> Kode provinsi tidak ditemukan di tabel referensi: UPRG-04
+ERROR - 2023-10-25 09:52:54 --> Kode UPRG sudah ada di database: BNKT-UPRG-1
+ERROR - 2023-10-25 09:52:54 --> Kode UPRG sudah ada di database: UPRG-03
+ERROR - 2023-10-25 09:53:51 --> Kode UPRG sudah ada di database: BNKT-UPRG-1
+ERROR - 2023-10-25 09:53:51 --> Kode UPRG sudah ada di database: UPRG-03
+ERROR - 2023-10-25 09:55:37 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;kode_desa&quot; does not exist
+LINE 3: WHERE &quot;kode_desa&quot; = 'BGKT'
+              ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'SELECT *\nFROM "...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKelembagaan.php(136): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKelembagaan->upload_lemdes()
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKelembagaan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-25 09:55:37 --> pg_query(): Query failed: ERROR:  column &quot;kode_desa&quot; does not exist
+LINE 3: WHERE &quot;kode_desa&quot; = 'BGKT'
+              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;kode_desa&quot; does not exist
+LINE 3: WHERE &quot;kode_desa&quot; = \'BGKT\'
+              ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "tb_sub_khg"
+WHERE "kode_desa" = \'BGKT\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "tb_sub_khg"
+WHERE "kode_desa" = \'BGKT\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "tb_sub_khg"
+WHERE "kode_desa" = \'BGKT\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "tb_sub_khg"
+WHERE "kode_desa" = :kode_desa:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKelembagaan.php(136): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKelembagaan->upload_lemdes()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKelembagaan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-25 09:56:27 --> Kode lembaga desa sudah ada di database: BNKT-1
+ERROR - 2023-10-25 09:56:27 --> Kode lembaga desa sudah ada di database: LMBG-01
+ERROR - 2023-10-25 09:56:41 --> Kode lembaga desa sudah ada di database: BNKT-1
+ERROR - 2023-10-25 09:56:41 --> Kode lembaga desa sudah ada di database: LMBG-01
+ERROR - 2023-10-25 09:56:41 --> Kode lembaga desa sudah ada di database: SRHJ-02
+ERROR - 2023-10-25 09:56:41 --> Kode lembaga desa sudah ada di database: WNKT-02
+ERROR - 2023-10-25 09:56:52 --> Kode UPRG sudah ada di database: BNKT-UPRG-1
+ERROR - 2023-10-25 09:56:52 --> Kode UPRG sudah ada di database: UPRG-03
+ERROR - 2023-10-25 09:56:52 --> Kode UPRG sudah ada di database: UPRG-04
+ERROR - 2023-10-25 10:00:58 --> Kode UPRG sudah ada di database: KALTENG
+ERROR - 2023-10-25 10:00:58 --> Kode UPRG sudah ada di database: PAPUA
+ERROR - 2023-10-25 10:00:58 --> Kode UPRG sudah ada di database: RIAU
+ERROR - 2023-10-25 10:00:58 --> Kode UPRG sudah ada di database: SUMSEL

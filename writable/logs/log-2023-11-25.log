@@ -1,0 +1,12 @@
+CRITICAL - 2023-11-25 06:36:18 --> Undefined array key "kode_rencana"
+in APPPATH\Views\database\admin\gamb-sasaran.php on line 740.
+ 1 APPPATH\Views\database\admin\gamb-sasaran.php(740): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_rencana"', 'APPPATH\\Views\\database\\admin\\gamb-sasaran.php', 740)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\admin\\gamb-sasaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/admin/gamb-sasaran', [], true)
+ 5 APPPATH\Controllers\AdmGambutSasaran.php(46): view('database/admin/gamb-sasaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSasaran->index('18')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaran))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

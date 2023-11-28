@@ -1,0 +1,182 @@
+CRITICAL - 2023-10-31 12:39:26 --> Undefined array key "koderencana"
+in APPPATH\Views\database\user\gamb-tindakan.php on line 562.
+ 1 APPPATH\Views\database\user\gamb-tindakan.php(562): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "koderencana"', 'APPPATH\\Views\\database\\user\\gamb-tindakan.php', 562)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\user\\gamb-tindakan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/user/gamb-tindakan', [], true)
+ 5 APPPATH\Controllers\UserGambutTindakan.php(23): view('database/user/gamb-tindakan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutTindakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutTindakan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-31 12:41:01 --> Undefined array key "jenis_tindakan_restorasi"
+in APPPATH\Views\database\user\gamb-tindakan.php on line 562.
+ 1 APPPATH\Views\database\user\gamb-tindakan.php(562): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jenis_tindakan_restorasi"', 'APPPATH\\Views\\database\\user\\gamb-tindakan.php', 562)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\user\\gamb-tindakan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/user/gamb-tindakan', [], true)
+ 5 APPPATH\Controllers\UserGambutTindakan.php(23): view('database/user/gamb-tindakan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutTindakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutTindakan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-31 12:45:41 --> Undefined array key "idrencana"
+in APPPATH\Views\database\user\gamb-subtindakan.php on line 525.
+ 1 APPPATH\Views\database\user\gamb-subtindakan.php(525): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idrencana"', 'APPPATH\\Views\\database\\user\\gamb-subtindakan.php', 525)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\user\\gamb-subtindakan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/user/gamb-subtindakan', [], true)
+ 5 APPPATH\Controllers\UserGambutSubTindakan.php(51): view('database/user/gamb-subtindakan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutSubTindakan->index('21')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutSubTindakan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-31 12:48:40 --> Undefined array key "pj"
+in APPPATH\Views\database\user\gamb-subtindakan.php on line 561.
+ 1 APPPATH\Views\database\user\gamb-subtindakan.php(561): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pj"', 'APPPATH\\Views\\database\\user\\gamb-subtindakan.php', 561)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\user\\gamb-subtindakan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/user/gamb-subtindakan', [], true)
+ 5 APPPATH\Controllers\UserGambutSubTindakan.php(51): view('database/user/gamb-subtindakan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutSubTindakan->index('21')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutSubTindakan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-31 12:50:10 --> Undefined array key "nama_tindakan_restorasi"
+in APPPATH\Views\database\user\gamb-subtindakan.php on line 527.
+ 1 APPPATH\Views\database\user\gamb-subtindakan.php(527): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_tindakan_restorasi"', 'APPPATH\\Views\\database\\user\\gamb-subtindakan.php', 527)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\user\\gamb-subtindakan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/user/gamb-subtindakan', [], true)
+ 5 APPPATH\Controllers\UserGambutSubTindakan.php(51): view('database/user/gamb-subtindakan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutSubTindakan->index('22')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutSubTindakan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-31 12:58:47 --> Undefined array key "koderencana"
+in APPPATH\Views\database\user\gamb-sasaran-inv.php on line 564.
+ 1 APPPATH\Views\database\user\gamb-sasaran-inv.php(564): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "koderencana"', 'APPPATH\\Views\\database\\user\\gamb-sasaran-inv.php', 564)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\user\\gamb-sasaran-inv.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/user/gamb-sasaran-inv', [], true)
+ 5 APPPATH\Controllers\UserGambutSasaranInv.php(56): view('database/user/gamb-sasaran-inv', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutSasaranInv->index('7')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutSasaranInv))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-31 13:04:18 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\UserGambutKegiatan.php(29): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\UserGambutKegiatan->index('10')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-31 13:04:18 --> pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_kegiatan"."id", "tb_kegiatan"."kode_tindakan_restorasi", "tb_kegiatan"."kode_kegiatan", "tb_kegiatan"."nama_kegiatan", "tb_kegiatan"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_kegiatan" ON "tb_kegiatan"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'10\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_kegiatan"."id", "tb_kegiatan"."kode_tindakan_restorasi", "tb_kegiatan"."kode_kegiatan", "tb_kegiatan"."nama_kegiatan", "tb_kegiatan"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_kegiatan" ON "tb_kegiatan"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'10\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_kegiatan"."id", "tb_kegiatan"."kode_tindakan_restorasi", "tb_kegiatan"."kode_kegiatan", "tb_kegiatan"."nama_kegiatan", "tb_kegiatan"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_kegiatan" ON "tb_kegiatan"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'10\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_kegiatan"."id", "tb_kegiatan"."kode_tindakan_restorasi", "tb_kegiatan"."kode_kegiatan", "tb_kegiatan"."nama_kegiatan", "tb_kegiatan"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_kegiatan" ON "tb_kegiatan"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = :tb_tindakan_restorasi.id:', [...], false)
+ 6 APPPATH\Controllers\UserGambutKegiatan.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutKegiatan->index('10')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-31 13:04:35 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\UserGambutKegiatan.php(29): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\UserGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-31 13:04:35 --> pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_kegiatan"."id", "tb_kegiatan"."kode_tindakan_restorasi", "tb_kegiatan"."kode_kegiatan", "tb_kegiatan"."nama_kegiatan", "tb_kegiatan"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_kegiatan" ON "tb_kegiatan"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_kegiatan"."id", "tb_kegiatan"."kode_tindakan_restorasi", "tb_kegiatan"."kode_kegiatan", "tb_kegiatan"."nama_kegiatan", "tb_kegiatan"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_kegiatan" ON "tb_kegiatan"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_kegiatan"."id", "tb_kegiatan"."kode_tindakan_restorasi", "tb_kegiatan"."kode_kegiatan", "tb_kegiatan"."nama_kegiatan", "tb_kegiatan"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_kegiatan" ON "tb_kegiatan"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_kegiatan"."id", "tb_kegiatan"."kode_tindakan_restorasi", "tb_kegiatan"."kode_kegiatan", "tb_kegiatan"."nama_kegiatan", "tb_kegiatan"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_kegiatan" ON "tb_kegiatan"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = :tb_tindakan_restorasi.id:', [...], false)
+ 6 APPPATH\Controllers\UserGambutKegiatan.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-31 13:09:16 --> Undefined variable $sasaran
+in APPPATH\Views\database\user\gamb-sasaran-clm.php on line 565.
+ 1 APPPATH\Views\database\user\gamb-sasaran-clm.php(565): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sasaran', 'APPPATH\\Views\\database\\user\\gamb-sasaran-clm.php', 565)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\user\\gamb-sasaran-clm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/user/gamb-sasaran-clm', [], true)
+ 5 APPPATH\Controllers\UserGambutSasaranClaim.php(55): view('database/user/gamb-sasaran-clm', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutSasaranClaim->index('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutSasaranClaim))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

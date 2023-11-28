@@ -1,0 +1,1565 @@
+ERROR - 2023-10-21 05:40:12 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutTindakan.php(26): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutTindakan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutTindakan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:40:12 --> pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutTindakan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutTindakan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutTindakan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:40:42 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutTindakan.php(26): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutTindakan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutTindakan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:40:42 --> pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutTindakan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutTindakan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutTindakan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:40:43 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutTindakan.php(26): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutTindakan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutTindakan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:40:43 --> pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutTindakan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutTindakan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutTindakan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:40:43 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutTindakan.php(26): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutTindakan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutTindakan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:40:43 --> pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id", "tb_tindakan_restorasi"."kode_tindakan_restorasi", "tb_tindakan_restorasi"."jenis_tindakan_restorasi", "tb_tindakan_restorasi"."tgl_mulai", "tb_tindakan_restorasi"."tgl_selesai", "tb_tindakan_restorasi"."deskripsi", "tb_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutTindakan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutTindakan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutTindakan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:43:10 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:43:10 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatn" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatn" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatn" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatn" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:43:57 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:43:57 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:43:58 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:43:58 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:43:59 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:43:59 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:43:59 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:43:59 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan" = "tb_alokasi"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:45:07 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #172, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:45:07 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:45:08 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:45:08 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:50:56 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #172, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:50:56 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:50:57 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:50:57 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:50:57 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:50:57 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:50:57 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:50:57 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:50:57 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:50:57 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:50:58 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:50:58 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:50:58 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:50:58 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:50:59 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:50:59 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:51:00 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:51:00 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana_kegiatan"."id" = :tb_rencana_kegiatan.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:53:53 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:53:53 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:53:54 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:53:54 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:53:55 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:53:55 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:54:07 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:54:07 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;.&quot;
+LINE 1: ...ana_kegiatan&quot;.&quot;kode_rencana_kegiatan&quot; &quot;tb_alokasi&quot;.&quot;kode_alo...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan" "tb_alokasi"."kode_alokasi"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_rencana_kegiatan" = "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:55:47 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_rencana_kegiatan.kode_tindakan_restorasi does not exist
+LINE 1: ...&quot;tb_rencana&quot;.&quot;judul&quot;, &quot;tb_rencana_kegiatan&quot;.&quot;id&quot;, &quot;tb_rencan...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(26): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:55:47 --> pg_query(): Query failed: ERROR:  column tb_rencana_kegiatan.kode_tindakan_restorasi does not exist
+LINE 1: ...&quot;tb_rencana&quot;.&quot;judul&quot;, &quot;tb_rencana_kegiatan&quot;.&quot;id&quot;, &quot;tb_rencan...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_rencana_kegiatan.kode_tindakan_restorasi does not exist
+LINE 1: ...&quot;tb_rencana&quot;.&quot;judul&quot;, &quot;tb_rencana_kegiatan&quot;.&quot;id&quot;, &quot;tb_rencan...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 05:55:48 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_rencana_kegiatan.kode_tindakan_restorasi does not exist
+LINE 1: ...&quot;tb_rencana&quot;.&quot;judul&quot;, &quot;tb_rencana_kegiatan&quot;.&quot;id&quot;, &quot;tb_rencan...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutKegiatan.php(26): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 05:55:48 --> pg_query(): Query failed: ERROR:  column tb_rencana_kegiatan.kode_tindakan_restorasi does not exist
+LINE 1: ...&quot;tb_rencana&quot;.&quot;judul&quot;, &quot;tb_rencana_kegiatan&quot;.&quot;id&quot;, &quot;tb_rencan...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_rencana_kegiatan.kode_tindakan_restorasi does not exist
+LINE 1: ...&quot;tb_rencana&quot;.&quot;judul&quot;, &quot;tb_rencana_kegiatan&quot;.&quot;id&quot;, &quot;tb_rencan...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_rencana_kegiatan"."id", "tb_rencana_kegiatan"."kode_tindakan_restorasi", "tb_rencana_kegiatan"."kode_rencana_kegiatan"
+FROM "tb_rencana"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutKegiatan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 06:20:27 --> Undefined variable $var
+in APPPATH\Views\database\admin\gamb-kegiatan.php on line 510.
+ 1 APPPATH\Views\database\admin\gamb-kegiatan.php(510): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $var', 'APPPATH\\Views\\database\\admin\\gamb-kegiatan.php', 510)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\admin\\gamb-kegiatan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/admin/gamb-kegiatan', [], true)
+ 5 APPPATH\Controllers\AdmGambutKegiatan.php(50): view('database/admin/gamb-kegiatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 06:21:21 --> Undefined variable $var
+in APPPATH\Views\database\admin\gamb-kegiatan.php on line 511.
+ 1 APPPATH\Views\database\admin\gamb-kegiatan.php(511): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $var', 'APPPATH\\Views\\database\\admin\\gamb-kegiatan.php', 511)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\admin\\gamb-kegiatan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/admin/gamb-kegiatan', [], true)
+ 5 APPPATH\Controllers\AdmGambutKegiatan.php(50): view('database/admin/gamb-kegiatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 06:21:23 --> Undefined variable $var
+in APPPATH\Views\database\admin\gamb-kegiatan.php on line 511.
+ 1 APPPATH\Views\database\admin\gamb-kegiatan.php(511): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $var', 'APPPATH\\Views\\database\\admin\\gamb-kegiatan.php', 511)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\admin\\gamb-kegiatan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/admin/gamb-kegiatan', [], true)
+ 5 APPPATH\Controllers\AdmGambutKegiatan.php(50): view('database/admin/gamb-kegiatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutKegiatan->index('7')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutKegiatan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 06:58:26 --> Undefined array key "jenis_tindakan_restorasi"
+in APPPATH\Views\database\admin\gamb-tindakan.php on line 664.
+ 1 APPPATH\Views\database\admin\gamb-tindakan.php(664): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jenis_tindakan_restorasi"', 'APPPATH\\Views\\database\\admin\\gamb-tindakan.php', 664)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\admin\\gamb-tindakan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/admin/gamb-tindakan', [], true)
+ 5 APPPATH\Controllers\AdmGambutTindakan.php(23): view('database/admin/gamb-tindakan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutTindakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutTindakan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 07:14:51 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #172, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSubTindakan.php(28): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->index('10')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 07:14:51 --> pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_tindakan_restorasi.kode_rencana does not exist
+LINE 3: JOIN &quot;tb_tindakan_restorasi&quot; ON &quot;tb_tindakan_restorasi&quot;.&quot;kod...
+                                        ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."volume", "tb_sub_tindakan_restorasi"."satuan", "tb_sub_tindakan_restorasi"."deskripsi", "tb_sub_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'10\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."volume", "tb_sub_tindakan_restorasi"."satuan", "tb_sub_tindakan_restorasi"."deskripsi", "tb_sub_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'10\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."volume", "tb_sub_tindakan_restorasi"."satuan", "tb_sub_tindakan_restorasi"."deskripsi", "tb_sub_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'10\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."volume", "tb_sub_tindakan_restorasi"."satuan", "tb_sub_tindakan_restorasi"."deskripsi", "tb_sub_tindakan_restorasi"."pj"
+FROM "tb_rencana"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = :tb_tindakan_restorasi.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutSubTindakan.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->index('10')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 08:13:15 --> ErrorException: pg_query(): Query failed: ERROR:  table name &quot;tb_tindakan_restorasi&quot; specified more than once in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_tind...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_tind...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_tind...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_tind...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSubTindakan.php(29): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->index('13')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 08:13:15 --> pg_query(): Query failed: ERROR:  table name &quot;tb_tindakan_restorasi&quot; specified more than once
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  table name &quot;tb_tindakan_restorasi&quot; specified more than once', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'13\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'13\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'13\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = :tb_tindakan_restorasi.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutSubTindakan.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->index('13')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 08:14:14 --> ErrorException: pg_query(): Query failed: ERROR:  table name &quot;tb_tindakan_restorasi&quot; specified more than once in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_tind...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_tind...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_tind...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_tind...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSubTindakan.php(29): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->index('13')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 08:14:14 --> pg_query(): Query failed: ERROR:  table name &quot;tb_tindakan_restorasi&quot; specified more than once
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  table name &quot;tb_tindakan_restorasi&quot; specified more than once', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'13\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'13\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'13\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = :tb_tindakan_restorasi.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutSubTindakan.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->index('13')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-21 08:16:34 --> ErrorException: pg_query(): Query failed: ERROR:  table name &quot;tb_tindakan_restorasi&quot; specified more than once in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT "tb_tind...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_tind...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_tind...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_tind...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSubTindakan.php(29): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->index('13')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-21 08:16:34 --> pg_query(): Query failed: ERROR:  table name &quot;tb_tindakan_restorasi&quot; specified more than once
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  table name &quot;tb_tindakan_restorasi&quot; specified more than once', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'13\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'13\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = \'13\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_tindakan_restorasi"."id" as "idtindakan", "tb_tindakan_restorasi"."kode_tindakan_restorasi" as "kodetindakan", "tb_tindakan_restorasi"."nama_tindakan_restorasi" as "namatindakan", "tb_sub_tindakan_restorasi"."id", "tb_sub_tindakan_restorasi"."kode_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."nama_sub_tindakan_restorasi", "tb_sub_tindakan_restorasi"."deskripsi"
+FROM "tb_tindakan_restorasi"
+JOIN "tb_tindakan_restorasi" ON "tb_tindakan_restorasi"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_sub_tindakan_restorasi" ON "tb_sub_tindakan_restorasi"."kode_tindakan_restorasi" = "tb_tindakan_restorasi"."kode_tindakan_restorasi"
+WHERE "tb_tindakan_restorasi"."id" = :tb_tindakan_restorasi.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutSubTindakan.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->index('13')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 08:43:55 --> Undefined array key "namatindakan"
+in APPPATH\Views\database\admin\gamb-subtindakan.php on line 492.
+ 1 APPPATH\Views\database\admin\gamb-subtindakan.php(492): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namatindakan"', 'APPPATH\\Views\\database\\admin\\gamb-subtindakan.php', 492)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\admin\\gamb-subtindakan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/admin/gamb-subtindakan', [], true)
+ 5 APPPATH\Controllers\AdmGambutSubTindakan.php(50): view('database/admin/gamb-subtindakan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->index('13')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 10:24:29 --> Call to a member function isValid() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 10:27:07 --> Call to a member function isValid() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 10:38:39 --> Call to a member function isValid() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 10:39:42 --> Call to a member function isValid() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 10:42:00 --> Call to a member function isValid() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 10:44:55 --> Call to a member function isValid() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 10:53:22 --> Call to a member function isValid() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 10:56:15 --> Call to a member function isValid() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 10:57:38 --> Call to a member function isValid() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 10:58:13 --> Call to a member function isValid() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-21 10:59:05 --> Call to a member function isValid() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

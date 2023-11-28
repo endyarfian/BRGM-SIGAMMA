@@ -1,0 +1,229 @@
+CRITICAL - 2023-10-23 05:17:31 --> Array to string conversion
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 126.
+ 1 APPPATH\Controllers\AdmGambutSubTindakan.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\AdmGambutSubTindakan.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-23 05:19:17 --> Undefined array key 5
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 125.
+ 1 APPPATH\Controllers\AdmGambutSubTindakan.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'APPPATH\\Controllers\\AdmGambutSubTindakan.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-23 05:20:54 --> Undefined array key 5
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 125.
+ 1 APPPATH\Controllers\AdmGambutSubTindakan.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'APPPATH\\Controllers\\AdmGambutSubTindakan.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-23 05:22:47 --> Undefined array key 5
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 125.
+ 1 APPPATH\Controllers\AdmGambutSubTindakan.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'APPPATH\\Controllers\\AdmGambutSubTindakan.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-23 05:22:58 --> Undefined array key 5
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 125.
+ 1 APPPATH\Controllers\AdmGambutSubTindakan.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'APPPATH\\Controllers\\AdmGambutSubTindakan.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-23 05:44:10 --> Undefined array key 5
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 137.
+ 1 APPPATH\Controllers\AdmGambutSubTindakan.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'APPPATH\\Controllers\\AdmGambutSubTindakan.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-23 05:47:49 --> ErrorException: pg_query(): Query failed: ERROR:  lastval is not yet defined in this session in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'SELECT LASTVAL(...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(422): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 D:\xampp\htdocs\BRGM\system\Model.php(283): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSubTindakan.php(139): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-23 05:47:49 --> pg_query(): Query failed: ERROR:  lastval is not yet defined in this session
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval is not yet defined in this session', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(422): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(283): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutSubTindakan.php(139): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-23 05:50:37 --> ErrorException: pg_query(): Query failed: ERROR:  lastval is not yet defined in this session in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'SELECT LASTVAL(...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL(...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL(...')
+#4 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(422): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL(...')
+#5 D:\xampp\htdocs\BRGM\system\Model.php(283): CodeIgniter\Database\Postgre\Connection->insertID()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSubTindakan.php(138): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-23 05:50:37 --> pg_query(): Query failed: ERROR:  lastval is not yet defined in this session
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  lastval is not yet defined in this session', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT LASTVAL() AS ins_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT LASTVAL() AS ins_id')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT LASTVAL() AS ins_id')
+ 5 SYSTEMPATH\Database\Postgre\Connection.php(422): CodeIgniter\Database\BaseConnection->query('SELECT LASTVAL() AS ins_id')
+ 6 SYSTEMPATH\Model.php(283): CodeIgniter\Database\Postgre\Connection->insertID()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutSubTindakan.php(138): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-23 05:53:03 --> ErrorException: pg_query(): Query failed: ERROR:  insert or update on table &quot;tb_sub_tindakan_restorasi&quot; violates foreign key constraint &quot;tb_sub_tindakan_restorasi_kode_tindakan_restorasi_fkey&quot;
+DETAIL:  Key (kode_tindakan_restorasi)=(R3) is not present in table &quot;tb_tindakan_restorasi&quot;. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSubTindakan.php(137): CodeIgniter\Model->insert(Array)
+#9 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-23 05:53:03 --> pg_query(): Query failed: ERROR:  insert or update on table &quot;tb_sub_tindakan_restorasi&quot; violates foreign key constraint &quot;tb_sub_tindakan_restorasi_kode_tindakan_restorasi_fkey&quot;
+DETAIL:  Key (kode_tindakan_restorasi)=(R3) is not present in table &quot;tb_tindakan_restorasi&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  insert or update on table &quot;tb_sub_tindakan_restorasi&quot; violates foreign key constraint &quot;tb_sub_tindakan_restorasi_kode_tindakan_restorasi_fkey&quot;
+DETAIL:  Key (kode_tindakan_restorasi)=(R3) is not present in table &quot;tb_tindakan_restorasi&quot;.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_sub_tindakan_restorasi" ("kode_tindakan_restorasi", "kode_sub_tindakan_restorasi", "nama_sub_tindakan_restorasi", "deskripsi") VALUES (\'R3\', \'r234\', \'asdasd\', \'asdas\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_sub_tindakan_restorasi" ("kode_tindakan_restorasi", "kode_sub_tindakan_restorasi", "nama_sub_tindakan_restorasi", "deskripsi") VALUES (\'R3\', \'r234\', \'asdasd\', \'asdas\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_sub_tindakan_restorasi" ("kode_tindakan_restorasi", "kode_sub_tindakan_restorasi", "nama_sub_tindakan_restorasi", "deskripsi") VALUES (\'R3\', \'r234\', \'asdasd\', \'asdas\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_sub_tindakan_restorasi" ("kode_tindakan_restorasi", "kode_sub_tindakan_restorasi", "nama_sub_tindakan_restorasi", "deskripsi") VALUES (:kode_tindakan_restorasi:, :kode_sub_tindakan_restorasi:, :nama_sub_tindakan_restorasi:, :deskripsi:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\AdmGambutSubTindakan.php(137): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-23 06:11:59 --> Undefined property: App\Controllers\AdmGambutSubTindakan::$db
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 131.
+ 1 APPPATH\Controllers\AdmGambutSubTindakan.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AdmGambutSubTindakan::$db', 'APPPATH\\Controllers\\AdmGambutSubTindakan.php', 131)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-23 06:12:27 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:12:27 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:12:27 --> Gagal menyimpan data: Array
+(
+    [kode_tindakan_restorasi] => R2
+    [kode_sub_tindakan_restorasi] => r239
+    [nama_sub_tindakan_restorasi] => asdasd
+    [deskripsi] => asdas
+)
+
+ERROR - 2023-10-23 06:12:27 --> Gagal menyimpan data: Array
+(
+    [kode_tindakan_restorasi] => R2
+    [kode_sub_tindakan_restorasi] => r240
+    [nama_sub_tindakan_restorasi] => asdasd
+    [deskripsi] => asdas
+)
+
+ERROR - 2023-10-23 06:19:23 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:19:23 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:25:50 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:25:50 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:36:20 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:36:20 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:37:12 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:37:12 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:45:51 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:45:51 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:45:51 --> Kode sub tindakan restorasi sudah ada di database: r240
+ERROR - 2023-10-23 06:48:35 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:48:35 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:48:35 --> Kode sub tindakan restorasi sudah ada di database: r240
+ERROR - 2023-10-23 06:49:25 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:49:25 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:49:25 --> Kode sub tindakan restorasi sudah ada di database: r240
+ERROR - 2023-10-23 06:49:52 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:49:52 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:49:52 --> Kode sub tindakan restorasi sudah ada di database: r240
+ERROR - 2023-10-23 06:51:02 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:51:02 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:51:02 --> Kode sub tindakan restorasi sudah ada di database: r240
+ERROR - 2023-10-23 06:51:38 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:51:38 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:51:38 --> Kode sub tindakan restorasi sudah ada di database: r240
+ERROR - 2023-10-23 06:52:15 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 06:52:15 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 06:52:15 --> Kode sub tindakan restorasi sudah ada di database: r240
+CRITICAL - 2023-10-23 07:33:49 --> Call to a member function getClientExtension() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 107.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-23 07:36:02 --> Call to a member function getClientExtension() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 107.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-23 07:37:15 --> Call to a member function getClientExtension() on null
+in APPPATH\Controllers\AdmGambutSubTindakan.php on line 107.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSubTindakan->upload('13')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSubTindakan))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-10-23 07:53:12 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R3
+ERROR - 2023-10-23 07:53:12 --> Kode tindakan restorasi tidak ditemukan di tabel referensi: R4
+ERROR - 2023-10-23 07:53:12 --> Kode sub tindakan restorasi sudah ada di database: r240

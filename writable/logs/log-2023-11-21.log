@@ -1,0 +1,81 @@
+ERROR - 2023-11-21 07:56:13 --> ErrorException: pg_query(): Query failed: ERROR:  missing FROM-clause entry for table &quot;tb_kabkot&quot;
+LINE 1: ...tb_prov&quot;.&quot;id&quot; as &quot;idprov&quot;, &quot;tb_prov&quot;.&quot;nama_prov&quot;, &quot;tb_kabkot...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'SELECT "tb_prov...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_prov...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_prov...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_prov...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutPelaksana.php(27): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutPelaksana->index('33')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutPelaksana))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-21 07:56:13 --> pg_query(): Query failed: ERROR:  missing FROM-clause entry for table &quot;tb_kabkot&quot;
+LINE 1: ...tb_prov&quot;.&quot;id&quot; as &quot;idprov&quot;, &quot;tb_prov&quot;.&quot;nama_prov&quot;, &quot;tb_kabkot...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  missing FROM-clause entry for table &quot;tb_kabkot&quot;
+LINE 1: ...tb_prov&quot;.&quot;id&quot; as &quot;idprov&quot;, &quot;tb_prov&quot;.&quot;nama_prov&quot;, &quot;tb_kabkot...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_kabkot"."id", "tb_kabkot"."kode_kabkot", "tb_kabkot"."nama_kabkot"
+FROM "tb_prov"
+JOIN "tb_pelaksana" ON "tb_pelaksana"."kode_prov" = "tb_prov"."kode_prov"
+WHERE "tb_prov"."id" = \'33\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_kabkot"."id", "tb_kabkot"."kode_kabkot", "tb_kabkot"."nama_kabkot"
+FROM "tb_prov"
+JOIN "tb_pelaksana" ON "tb_pelaksana"."kode_prov" = "tb_prov"."kode_prov"
+WHERE "tb_prov"."id" = \'33\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_kabkot"."id", "tb_kabkot"."kode_kabkot", "tb_kabkot"."nama_kabkot"
+FROM "tb_prov"
+JOIN "tb_pelaksana" ON "tb_pelaksana"."kode_prov" = "tb_prov"."kode_prov"
+WHERE "tb_prov"."id" = \'33\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_prov"."kode_prov" as "kodeprov", "tb_prov"."id" as "idprov", "tb_prov"."nama_prov", "tb_kabkot"."id", "tb_kabkot"."kode_kabkot", "tb_kabkot"."nama_kabkot"
+FROM "tb_prov"
+JOIN "tb_pelaksana" ON "tb_pelaksana"."kode_prov" = "tb_prov"."kode_prov"
+WHERE "tb_prov"."id" = :tb_prov.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutPelaksana.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutPelaksana->index('33')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutPelaksana))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-11-21 07:57:00 --> Undefined array key "jenis"
+in APPPATH\Views\database\admin\gamb-pelaksana.php on line 704.
+ 1 APPPATH\Views\database\admin\gamb-pelaksana.php(704): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jenis"', 'APPPATH\\Views\\database\\admin\\gamb-pelaksana.php', 704)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\admin\\gamb-pelaksana.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/admin/gamb-pelaksana', [], true)
+ 5 APPPATH\Controllers\AdmGambutPelaksana.php(48): view('database/admin/gamb-pelaksana', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutPelaksana->index('33')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutPelaksana))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-11-21 09:03:07 --> Undefined array key "kodesa"
+in APPPATH\Views\database\admin\gamb-lemdes.php on line 590.
+ 1 APPPATH\Views\database\admin\gamb-lemdes.php(590): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kodesa"', 'APPPATH\\Views\\database\\admin\\gamb-lemdes.php', 590)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\admin\\gamb-lemdes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/admin/gamb-lemdes', [], true)
+ 5 APPPATH\Controllers\AdmGambutLemdes.php(63): view('database/admin/gamb-lemdes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutLemdes->index('5346')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutLemdes))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-11-21 09:03:32 --> Undefined array key "kode_lemdes"
+in APPPATH\Views\database\admin\gamb-lemdes.php on line 708.
+ 1 APPPATH\Views\database\admin\gamb-lemdes.php(708): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_lemdes"', 'APPPATH\\Views\\database\\admin\\gamb-lemdes.php', 708)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\admin\\gamb-lemdes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/admin/gamb-lemdes', [], true)
+ 5 APPPATH\Controllers\AdmGambutLemdes.php(63): view('database/admin/gamb-lemdes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutLemdes->index('5346')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutLemdes))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
