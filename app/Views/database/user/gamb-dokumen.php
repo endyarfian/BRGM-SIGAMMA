@@ -537,6 +537,7 @@
                                             <th>Kode Dokumen</th>
                                             <th>Tipe Dokumen</th>
                                             <th>Judul Dokumen</th>
+                                            <th>Tahun Disahkan</th>
                                             <th>Tgl. Berlaku</th>
                                             <th>Tgl. Berakhir</th>
                                             <th>Pengesah</th>
@@ -552,14 +553,15 @@
                                                 <td><?= $var['kode_rencana']; ?></td>
                                                 <td><?= $var['tipe_rencana']; ?></td>
                                                 <td><?= $var['judul']; ?></td>
+                                                <td><?= $var['tahun']; ?></td>
                                                 <td><?= $var['tgl_berlaku']; ?></td>
                                                 <td><?= $var['tgl_berakhir']; ?></td>
                                                 <td><?= $var['pengesah']; ?></td>
-                                                <td style="white-space: pre-line;"><?= $var['nama_file']; ?></td>
+                                                <td style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px;"><?= $var['file']; ?></td>
                                                 <td>
                                                     <div class="btn-group" role="group">
-                                                        <a href="<?= base_url('404'); ?>/<?= $var['id']; ?>" type="button" class="btn btn-success" title="Unduh Berkas">
-                                                            <svg xmlns=" http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-type-pdf" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <a type="button" class="btn btn-success " href="<?= $var['file']; ?>" target="_blank" title="Dokumen PDF">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-type-pdf" width="32" height="32" viewBox="0 0 25 25" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                                 <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
                                                                 <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4"></path>

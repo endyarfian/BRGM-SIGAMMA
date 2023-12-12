@@ -1,0 +1,659 @@
+CRITICAL - 2023-12-04 02:11:52 --> Attempt to read property "username" on null
+in APPPATH\Views\template\peta.php on line 263.
+ 1 APPPATH\Views\template\peta.php(263): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "username" on null', 'APPPATH\\Views\\template\\peta.php', 263)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\peta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/peta', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/peta', [], true)
+ 6 APPPATH\Controllers\Peta.php(54): view('pages/peta', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Peta->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 06:00:22 --> Undefined variable $title
+in APPPATH\Views\template\peta.php on line 11.
+ 1 APPPATH\Views\template\peta.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'APPPATH\\Views\\template\\peta.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\peta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/peta', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 6 APPPATH\Controllers\DetailPetaGambut.php(80): view('pages/gambut-detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 06:00:46 --> Undefined variable $kodekhg
+in APPPATH\Views\template\peta.php on line 356.
+ 1 APPPATH\Views\template\peta.php(356): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kodekhg', 'APPPATH\\Views\\template\\peta.php', 356)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\peta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/peta', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 6 APPPATH\Controllers\DetailPetaGambut.php(81): view('pages/gambut-detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 06:18:42 --> Undefined variable $data
+in APPPATH\Views\pages\gambut-detail.php on line 1024.
+ 1 APPPATH\Views\pages\gambut-detail.php(1024): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\pages\\gambut-detail.php', 1024)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gambut-detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 5 APPPATH\Controllers\DetailPetaGambut.php(81): view('pages/gambut-detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('893')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 06:19:37 --> Undefined variable $data
+in APPPATH\Views\pages\gambut-detail.php on line 1024.
+ 1 APPPATH\Views\pages\gambut-detail.php(1024): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\pages\\gambut-detail.php', 1024)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gambut-detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 5 APPPATH\Controllers\DetailPetaGambut.php(81): view('pages/gambut-detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('893')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 06:24:40 --> Undefined variable $data
+in APPPATH\Views\pages\gambut-detail.php on line 1009.
+ 1 APPPATH\Views\pages\gambut-detail.php(1009): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\pages\\gambut-detail.php', 1009)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gambut-detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 5 APPPATH\Controllers\DetailPetaGambut.php(81): view('pages/gambut-detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('893')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 06:47:36 --> Attempt to read property "username" on null
+in APPPATH\Views\template\peta.php on line 263.
+ 1 APPPATH\Views\template\peta.php(263): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "username" on null', 'APPPATH\\Views\\template\\peta.php', 263)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\peta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/peta', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/peta', [], true)
+ 6 APPPATH\Controllers\Peta.php(54): view('pages/peta', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Peta->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 06:54:31 --> Undefined variable $kodekhg
+in APPPATH\Views\pages\gambut-detail.php on line 978.
+ 1 APPPATH\Views\pages\gambut-detail.php(978): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kodekhg', 'APPPATH\\Views\\pages\\gambut-detail.php', 978)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gambut-detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 5 APPPATH\Controllers\DetailPetaGambut.php(83): view('pages/gambut-detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('893')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 07:05:47 --> Trying to access array offset on value of type null
+in APPPATH\Views\pages\gambut-detail.php on line 1008.
+ 1 APPPATH\Views\pages\gambut-detail.php(1008): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\pages\\gambut-detail.php', 1008)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gambut-detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 5 APPPATH\Controllers\DetailPetaGambut.php(83): view('pages/gambut-detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('1000')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 07:06:06 --> Trying to access array offset on value of type null
+in APPPATH\Views\pages\gambut-detail.php on line 1008.
+ 1 APPPATH\Views\pages\gambut-detail.php(1008): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\pages\\gambut-detail.php', 1008)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gambut-detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 5 APPPATH\Controllers\DetailPetaGambut.php(83): view('pages/gambut-detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('999')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 07:07:36 --> Trying to access array offset on value of type null
+in APPPATH\Views\pages\gambut-detail.php on line 1008.
+ 1 APPPATH\Views\pages\gambut-detail.php(1008): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\pages\\gambut-detail.php', 1008)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gambut-detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 5 APPPATH\Controllers\DetailPetaGambut.php(83): view('pages/gambut-detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('997')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 08:05:34 --> Array callback has to contain indices 0 and 1
+in APPPATH\Views\pages\gambut-detail.php on line 882.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 4 APPPATH\Controllers\DetailPetaGambut.php(92): view('pages/gambut-detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-04 08:50:31 --> ErrorException: pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #163, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\DetailPetaGambut.php(73): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-04 08:50:31 --> pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."tahun", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."tahun", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."tahun", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."tahun", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = :tb_khg.id:', [...], false)
+ 6 APPPATH\Controllers\DetailPetaGambut.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-04 08:51:02 --> ErrorException: pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #163, 'SELECT "tb_khg"...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_khg"...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_khg"...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_khg"...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\DetailPetaGambut.php(75): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-04 08:51:02 --> pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = :tb_khg.id:', [...], false)
+ 6 APPPATH\Controllers\DetailPetaGambut.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-04 08:51:04 --> ErrorException: pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #163, 'SELECT "tb_khg"...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_khg"...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_khg"...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_khg"...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\DetailPetaGambut.php(75): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-04 08:51:04 --> pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = :tb_khg.id:', [...], false)
+ 6 APPPATH\Controllers\DetailPetaGambut.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-04 08:51:56 --> ErrorException: pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #164, 'SELECT "tb_khg"...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_khg"...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_khg"...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_khg"...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\DetailPetaGambut.php(75): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-04 08:51:56 --> pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  table name &quot;tb_output_target&quot; specified more than once', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target"  = "tb_target"."kode_target"
+JOIN "tb_target" ON "tb_target"."kode_rencana"  = "tb_rencana"."kode_rencana"
+WHERE "tb_khg"."id" = :tb_khg.id:', [...], false)
+ 6 APPPATH\Controllers\DetailPetaGambut.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-04 08:55:09 --> ErrorException: pg_query(): Query failed: ERROR:  missing FROM-clause entry for table &quot;tahun tb_output_target&quot;
+LINE 1: SELECT &quot;tb_rencana&quot;.&quot;tahun tb_output_target&quot;.&quot;id&quot; as &quot;idintv...
+               ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #163, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\DetailPetaGambut.php(73): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-04 08:55:09 --> pg_query(): Query failed: ERROR:  missing FROM-clause entry for table &quot;tahun tb_output_target&quot;
+LINE 1: SELECT &quot;tb_rencana&quot;.&quot;tahun tb_output_target&quot;.&quot;id&quot; as &quot;idintv...
+               ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  missing FROM-clause entry for table &quot;tahun tb_output_target&quot;
+LINE 1: SELECT &quot;tb_rencana&quot;.&quot;tahun tb_output_target&quot;.&quot;id&quot; as &quot;idintv...
+               ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."tahun tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."tahun tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."tahun tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."tahun tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = :tb_khg.id:', [...], false)
+ 6 APPPATH\Controllers\DetailPetaGambut.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-04 09:11:07 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;tb_rencana.tahun&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT &quot;tb_rencana&quot;.&quot;tahun&quot;, SUM(tb_output_target.volume) as...
+               ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #156, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\GrafikPetaGambut.php(22): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\GrafikPetaGambut->index('902')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikPetaGambut))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-04 09:11:07 --> pg_query(): Query failed: ERROR:  column &quot;tb_rencana.tahun&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT &quot;tb_rencana&quot;.&quot;tahun&quot;, SUM(tb_output_target.volume) as...
+               ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;tb_rencana.tahun&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT &quot;tb_rencana&quot;.&quot;tahun&quot;, SUM(tb_output_target.volume) as...
+               ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."tahun", SUM(tb_output_target.volume) as total_volume
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."tahun", SUM(tb_output_target.volume) as total_volume
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."tahun", SUM(tb_output_target.volume) as total_volume
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'902\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."tahun", SUM(tb_output_target.volume) as total_volume
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = :tb_khg.id:', [...], false)
+ 6 APPPATH\Controllers\GrafikPetaGambut.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikPetaGambut->index('902')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikPetaGambut))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-04 09:39:52 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type bigint: &quot;$1&quot;
+LINE 8: WHERE &quot;tb_khg&quot;.&quot;id&quot; = '$1'
+                              ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #157, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\GrafikPetaGambut.php(23): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\GrafikPetaGambut->index('$1')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikPetaGambut))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-04 09:39:52 --> pg_query(): Query failed: ERROR:  invalid input syntax for type bigint: &quot;$1&quot;
+LINE 8: WHERE &quot;tb_khg&quot;.&quot;id&quot; = '$1'
+                              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type bigint: &quot;$1&quot;
+LINE 8: WHERE &quot;tb_khg&quot;.&quot;id&quot; = \'$1\'
+                              ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."tahun", SUM(tb_output_target.volume) as total_volume
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'$1\'
+GROUP BY "tb_rencana"."tahun"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."tahun", SUM(tb_output_target.volume) as total_volume
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'$1\'
+GROUP BY "tb_rencana"."tahun"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."tahun", SUM(tb_output_target.volume) as total_volume
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'$1\'
+GROUP BY "tb_rencana"."tahun"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."tahun", SUM(tb_output_target.volume) as total_volume
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = :tb_khg.id:
+GROUP BY "tb_rencana"."tahun"', [...], false)
+ 6 APPPATH\Controllers\GrafikPetaGambut.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GrafikPetaGambut->index('$1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GrafikPetaGambut))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-04 09:51:53 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;tb_output_target.id&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT &quot;tb_rencana&quot;.&quot;tahun&quot;, &quot;tb_output_target&quot;.&quot;id&quot; as &quot;idi...
+                                     ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #164, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\DetailPetaGambut.php(74): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('893')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-04 09:51:53 --> pg_query(): Query failed: ERROR:  column &quot;tb_output_target.id&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT &quot;tb_rencana&quot;.&quot;tahun&quot;, &quot;tb_output_target&quot;.&quot;id&quot; as &quot;idi...
+                                     ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;tb_output_target.id&quot; must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT &quot;tb_rencana&quot;.&quot;tahun&quot;, &quot;tb_output_target&quot;.&quot;id&quot; as &quot;idi...
+                                     ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."tahun", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv", "tb_output_target"."volume"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'893\'
+GROUP BY "tb_rencana"."tahun"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."tahun", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv", "tb_output_target"."volume"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'893\'
+GROUP BY "tb_rencana"."tahun"')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."tahun", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv", "tb_output_target"."volume"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = \'893\'
+GROUP BY "tb_rencana"."tahun"')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."tahun", "tb_output_target"."id" as "idintv", "tb_output_target"."kode_output_target" as "kodeintv", "tb_output_target"."volume"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_output_target" ON "tb_output_target"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_target" ON "tb_target"."kode_target"  = "tb_output_target"."kode_target"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_target"."kode_rencana"
+WHERE "tb_khg"."id" = :tb_khg.id:
+GROUP BY "tb_rencana"."tahun"', [...], false)
+ 6 APPPATH\Controllers\DetailPetaGambut.php(74): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('893')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 09:53:07 --> Undefined array key "total_volume"
+in APPPATH\Controllers\DetailPetaGambut.php on line 80.
+ 1 APPPATH\Controllers\DetailPetaGambut.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total_volume"', 'APPPATH\\Controllers\\DetailPetaGambut.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('893')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 09:53:09 --> Undefined array key "total_volume"
+in APPPATH\Controllers\DetailPetaGambut.php on line 80.
+ 1 APPPATH\Controllers\DetailPetaGambut.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total_volume"', 'APPPATH\\Controllers\\DetailPetaGambut.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('893')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 09:57:15 --> Undefined variable $khg
+in APPPATH\Views\pages\gambut-detail.php on line 1039.
+ 1 APPPATH\Views\pages\gambut-detail.php(1039): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $khg', 'APPPATH\\Views\\pages\\gambut-detail.php', 1039)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gambut-detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 5 APPPATH\Controllers\DetailPetaGambut.php(91): view('pages/gambut-detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-04 10:05:42 --> array_column(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Views\pages\gambut-detail.php on line 1495.
+ 1 APPPATH\Views\pages\gambut-detail.php(1495): array_column('[{"tahun":"2023","total_volume":122428}]', 'tahun')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\gambut-detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/gambut-detail', [], true)
+ 5 APPPATH\Controllers\DetailPetaGambut.php(93): view('pages/gambut-detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('902')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

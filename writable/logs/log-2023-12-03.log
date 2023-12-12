@@ -1,0 +1,101 @@
+CRITICAL - 2023-12-03 05:48:24 --> Undefined array key "nama_file"
+in APPPATH\Views\database\user\gamb-dokumen.php on line 558.
+ 1 APPPATH\Views\database\user\gamb-dokumen.php(558): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_file"', 'APPPATH\\Views\\database\\user\\gamb-dokumen.php', 558)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\user\\gamb-dokumen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/user/gamb-dokumen', [], true)
+ 5 APPPATH\Controllers\UserGambutRencana.php(22): view('database/user/gamb-dokumen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutRencana->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutRencana))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-03 05:51:23 --> Undefined array key "nama_file"
+in APPPATH\Views\database\user\gamb-dokumen.php on line 558.
+ 1 APPPATH\Views\database\user\gamb-dokumen.php(558): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_file"', 'APPPATH\\Views\\database\\user\\gamb-dokumen.php', 558)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\user\\gamb-dokumen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/user/gamb-dokumen', [], true)
+ 5 APPPATH\Controllers\UserGambutRencana.php(22): view('database/user/gamb-dokumen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutRencana->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutRencana))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-03 06:59:39 --> Undefined variable $kodekhg
+in APPPATH\Views\template\peta.php on line 356.
+ 1 APPPATH\Views\template\peta.php(356): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kodekhg', 'APPPATH\\Views\\template\\peta.php', 356)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\peta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/peta', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('pages/peta', [], true)
+ 6 APPPATH\Controllers\Peta.php(54): view('pages/peta', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Peta->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-03 07:53:50 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_rencana.kode_rencana_ does not exist
+LINE 1: ...&quot;kodekegiatan&quot;, &quot;tb_rencana&quot;.&quot;id&quot; as &quot;idrencana&quot;, &quot;tb_rencan...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;tb_rencana.kode_rencana&quot;. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #164, 'SELECT "tb_khg"...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_khg"...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_khg"...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_khg"...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\DetailPetaGambut.php(45): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('893')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-03 07:53:50 --> pg_query(): Query failed: ERROR:  column tb_rencana.kode_rencana_ does not exist
+LINE 1: ...&quot;kodekegiatan&quot;, &quot;tb_rencana&quot;.&quot;id&quot; as &quot;idrencana&quot;, &quot;tb_rencan...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;tb_rencana.kode_rencana&quot;.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_rencana.kode_rencana_ does not exist
+LINE 1: ...&quot;kodekegiatan&quot;, &quot;tb_rencana&quot;.&quot;id&quot; as &quot;idrencana&quot;, &quot;tb_rencan...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;tb_rencana.kode_rencana&quot;.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_alokasi"."id" as "idalokasi", "tb_alokasi"."kode_alokasi" as "kodealokasi", "tb_rencana_kegiatan"."id" as "idkegiatan", "tb_rencana_kegiatan"."kode_rencana_kegiatan" as "kodekegiatan", "tb_rencana"."id" as "idrencana", "tb_rencana"."kode_rencana_" as "koderencana"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan"  = "tb_alokasi"."kode_rencana_kegiatan"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_rencana_kegiatan"."kode_rencana"
+WHERE "tb_khg"."id" = \'893\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_alokasi"."id" as "idalokasi", "tb_alokasi"."kode_alokasi" as "kodealokasi", "tb_rencana_kegiatan"."id" as "idkegiatan", "tb_rencana_kegiatan"."kode_rencana_kegiatan" as "kodekegiatan", "tb_rencana"."id" as "idrencana", "tb_rencana"."kode_rencana_" as "koderencana"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan"  = "tb_alokasi"."kode_rencana_kegiatan"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_rencana_kegiatan"."kode_rencana"
+WHERE "tb_khg"."id" = \'893\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_alokasi"."id" as "idalokasi", "tb_alokasi"."kode_alokasi" as "kodealokasi", "tb_rencana_kegiatan"."id" as "idkegiatan", "tb_rencana_kegiatan"."kode_rencana_kegiatan" as "kodekegiatan", "tb_rencana"."id" as "idrencana", "tb_rencana"."kode_rencana_" as "koderencana"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan"  = "tb_alokasi"."kode_rencana_kegiatan"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_rencana_kegiatan"."kode_rencana"
+WHERE "tb_khg"."id" = \'893\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_khg"."id" as "idkhg", "tb_khg"."kode_khg" as "kodekhg", "tb_sub_khg"."id" as "idsubkhg", "tb_sub_khg"."kode_sub_khg" as "kodesubkhg", "tb_hru"."id" as "idhru", "tb_hru"."kode_hru" as "kodehru", "tb_alokasi"."id" as "idalokasi", "tb_alokasi"."kode_alokasi" as "kodealokasi", "tb_rencana_kegiatan"."id" as "idkegiatan", "tb_rencana_kegiatan"."kode_rencana_kegiatan" as "kodekegiatan", "tb_rencana"."id" as "idrencana", "tb_rencana"."kode_rencana_" as "koderencana"
+FROM "tb_khg"
+JOIN "tb_sub_khg" ON "tb_sub_khg"."kode_khg"  = "tb_khg"."kode_khg"
+JOIN "tb_hru" ON "tb_hru"."kode_sub_khg"  = "tb_sub_khg"."kode_sub_khg"
+JOIN "tb_alokasi" ON "tb_alokasi"."kode_hru"  = "tb_hru"."kode_hru"
+JOIN "tb_rencana_kegiatan" ON "tb_rencana_kegiatan"."kode_rencana_kegiatan"  = "tb_alokasi"."kode_rencana_kegiatan"
+JOIN "tb_rencana" ON "tb_rencana"."kode_rencana"  = "tb_rencana_kegiatan"."kode_rencana"
+WHERE "tb_khg"."id" = :tb_khg.id:', [...], false)
+ 6 APPPATH\Controllers\DetailPetaGambut.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPetaGambut->index('893')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPetaGambut))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

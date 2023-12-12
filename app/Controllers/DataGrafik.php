@@ -29,7 +29,7 @@ class DataGrafik extends BaseController
         $hru = array_column($kawasan, 'total_hru');
         // dd($kodeprov);
         $db = \Config\Database::connect();
-        $data = $db->table('tb_hru');
+        $data = $db->table('tb_khg');
         $data->select('SUM(luas) as total_luas');
         $query = $data->get();
 

@@ -65,7 +65,7 @@ $routes->get('/gambut/kawasan/khg/(:num)', 'UserGambutKhg::index/$1');
 $routes->get('/gambut/kawasan/subkhg/(:num)', 'UserGambutSubKhg::index/$1');
 
 $routes->get('/gambut/tindakan', 'UserGambutTindakan::index');
-$routes->get('/gambut/tindakan/cvvccvcv csubtindakan/(:num)', 'UserGambutSubTindakan::index/$1');
+$routes->get('/gambut/tindakan/subtindakan/(:num)', 'UserGambutSubTindakan::index/$1');
 
 $routes->get('/gambut/rencana', 'UserGambutRencana::index');
 $routes->get('/gambut/rencana/sasaran/(:num)', 'UserGambutSasaran::index/$1');
@@ -208,8 +208,7 @@ $routes->get('/admin/peran', 'Peran::index', ['filter' => 'role:developer,web-ma
 $routes->get('/gambut/data-dashboard', 'DataGrafik::grafikgambut');
 $routes->get('/gambut/data-dashboard2', 'DataGrafik::grafikmangrove');
 // maps data
-$routes->get('/gambut/data-map', 'DataMaps::mapsdata');
-
+$routes->get('/peta-gambut/detail/(:num)', 'DetailPetaGambut::index/$1');
 
 /*
  * --------------------------------------------------------------------

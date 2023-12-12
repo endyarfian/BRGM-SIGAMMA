@@ -28,16 +28,16 @@ class Peta extends BaseController
 
         // $point = $file->features;
 
-        $model = new \App\Models\GambProvModel();
+        $model = new \App\Models\GambKhgModel();
 
-        $file = file_get_contents("./dashboard/mapdata/provgambut.geojson");
+        $file = file_get_contents("./dashboard/mapdata/khg.geojson");
         $file = json_decode($file);
 
         $features = $file->features;
 
         foreach ($features as $index => $feature) {
-            $kodeprov = $feature->properties->KODE;
-            $data = $model->where('kode_prov', $kodeprov)->first();
+            $kodekhg = $feature->properties->KODE_KHG;
+            $data = $model->where('kode_khg', $kodekhg)->first();
 
             if ($data) {
                 $features[$index]->properties->id = $data['id'];
@@ -48,7 +48,7 @@ class Peta extends BaseController
         }
 
         $data = [
-            'kodeprov' => $features,
+            'kodekhg' => $features,
             'title' => 'SIGAMMA | Peta Interaktif Kawasan'
         ];
         return view('pages/peta', $data);

@@ -537,7 +537,7 @@
                 <!-- tabel kabupaten/kota -->
                 <div id="head-2" class="seperator-header layout-top-spacing">
                     <?php if (!empty($prov2)) : ?>
-                        <h4 class="">DATA KABUPATEN/KOTA PROVINSI <?= strtoupper($prov2[0]['nama_prov']); ?></h4>
+                        <h4 class="">DATA UNIT PELAKSANA DI PROVINSI <?= strtoupper($prov2[0]['nama_prov']); ?></h4>
                     <?php endif; ?>
                 </div>
 
@@ -549,27 +549,25 @@
                                     <thead>
                                         <tr>
                                             <th>No.</th>
-                                            <th>Kode Kabupaten/Kota</th>
-                                            <th>Nama Kabupaten/Kota</th>
-                                            <th>Tindakan</th>
+                                            <th>Kode UPRG</th>
+                                            <th>Jenis</th>
+                                            <th>Nama</th>
+                                            <th>PIC</th>
+                                            <th>Telepon</th>
+                                            <th>Alamat</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php $no = 1; ?>
-                                        <?php foreach ($kabkot as $var) : ?>
+                                        <?php foreach ($pelaksana as $var) : ?>
                                             <tr>
                                                 <td scope="row"><?= $no++; ?></td>
-                                                <td><?= $var['kode_kabkot']; ?></td>
-                                                <td><?= $var['nama_kabkot']; ?></td>
-                                                <td>
-                                                    <a href="<?= base_url('gambut/administrasi/kabkot/'); ?>/<?= $var['id']; ?>" type="button" class="btn btn-outline-success" title="Data Kecamatan">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                            <path d="M7 7l5 5l-5 5"></path>
-                                                            <path d="M13 7l5 5l-5 5"></path>
-                                                        </svg>
-                                                    </a>
-                                                </td>
+                                                <td><?= $var['kode_pelaksana']; ?></td>
+                                                <td><?= $var['jenis']; ?></td>
+                                                <td><?= $var['nama']; ?></td>
+                                                <td><?= $var['pj']; ?></td>
+                                                <td><?= $var['tlpn']; ?></td>
+                                                <td><?= $var['alamat']; ?></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>

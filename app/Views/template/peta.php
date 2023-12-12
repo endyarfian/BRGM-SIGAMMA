@@ -353,7 +353,7 @@
     <script src="<?= base_url('dashboard/src/plugins/src/leaflet/basemap-providers.js') ?>"></script>
     <!--  END CUSTOM SCRIPTS FILE  -->
     <script>
-        var data = <?= json_encode($kodeprov) ?>;
+        var data = <?= json_encode($kodekhg) ?>;
         var map = L.map('map').setView([-1.1478241, 120.2331073], 5);
 
         var lyrOSM = L.tileLayer.provider('OpenStreetMap.Mapnik');
@@ -371,10 +371,12 @@
         };
 
         info.update = function(props) {
-            this._div.innerHTML = '<h4><b>Data Provinsi</b></h4>' +
+            this._div.innerHTML = '<h4><b>Data KHG</b></h4>' +
                 (props ?
-                    'Kode Provinsi : <b>' + props.KODE +
-                    '<br> </b> Nama Provinsi : <b>' + props.PROVINSI :
+                    'Nama KHG : <b>' + props.NAMA_KHG +
+                    '<br> </b> Kode KHG : <b>' + props.KODE_KHG +
+                    '<br> </b> Luas : <b>' + props.luas +
+                    ' Ha <br> </b> Provinsi : <b>' + props.PROVINSI :
                     '</b><br> Layangkan cursor pada kawasan');
         };
 
@@ -396,7 +398,7 @@
 
             layer.setStyle({
                 weight: 3,
-                color: '#5E9338',
+                color: '#F07C15',
                 dashArray: '',
                 fillOpacity: 0.3,
 
@@ -422,7 +424,7 @@
 
         function onEachFeature(feature, layer) {
             layer.on('click', function(ev) {
-                window.open("/maps/detail/" + feature.properties.id)
+                window.open("/peta-gambut/detail/" + feature.properties.id)
             });
             layer.on({
                 mouseover: highlightFeature,

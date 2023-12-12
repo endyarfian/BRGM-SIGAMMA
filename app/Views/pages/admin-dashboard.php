@@ -578,27 +578,6 @@
                                         <div class="item-timeline timeline-new">
                                             <div class="t-dot">
                                                 <div class="t-secondary">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users-group" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                        <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                                                        <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
-                                                        <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                                                        <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
-                                                        <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                                                        <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="t-content">
-                                                <div class="t-uppercontent">
-                                                    <h5>Data Kelembagaan : <a href="/admin/gambut/kelembagaan "><span>[MASUK]</span></a></h5>
-                                                </div>
-                                                <p>Data kelembagaan dan unit pelaksana.</p>
-                                            </div>
-                                        </div>
-                                        <div class="item-timeline timeline-new">
-                                            <div class="t-dot">
-                                                <div class="t-secondary">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-drag-drop-2" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                         <path d="M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"></path>

@@ -37,7 +37,7 @@ $.ajax({
                                 height: 350,
                                 type: 'bar',
                                 toolbar: {
-                                    show: true,
+                                    show: false,
                                 }
                             },
                             colors: ['#5E9338', '#FFC94D', '#F07C15', ],
@@ -164,6 +164,9 @@ $.ajax({
                                 fontFamily: 'Lexend, sans-serif',
                                 height: 345,
                                 type: 'treemap',
+                                toolbar: {
+                                    show: false,
+                                }
                             },
                             stroke: {
                                 width: 0,
@@ -181,7 +184,7 @@ $.ajax({
                             plotOptions: {
                                 treemap: {
                                     distributed: true,
-                                    enableShades: true,
+                                    enableShades: false,
 
                                 }
                             }
@@ -196,6 +199,9 @@ $.ajax({
                             type: 'bar',
                             height: 370,
                             stacked: true,
+                            toolbar: {
+                                show: false,
+                            }
                           },
                           plotOptions: {
                             bar: {
@@ -211,10 +217,6 @@ $.ajax({
                                 }
                               }
                             },
-                          },
-                          stroke: {
-                            width: 1,
-                            colors: ['#fff']
                           },
 
                           xaxis: {
@@ -250,7 +252,7 @@ $.ajax({
                                 height: 350,
                                 type: 'bar',
                                 toolbar: {
-                                    show: true,
+                                    show: false,
                                 }
                             },
                             colors: ['#5E9338', '#FFC94D', '#F07C15', ],
@@ -282,7 +284,7 @@ $.ajax({
                                 }
                             },
                             grid: {
-                                borderColor: '#e0e6ed',
+                                borderColor: '#191e3a',
                                 strokeDashArray: 4,
                                 yaxis: {
                                     lines: {
@@ -292,7 +294,7 @@ $.ajax({
                             },
                             stroke: {
                                 show: true,
-                                width: 0,
+                                width: 2,
                                 colors: ['transparent']
                             },
                             series: [{
@@ -367,7 +369,7 @@ $.ajax({
                                 }
                             }, ]
                         }
-                        // luasan
+                        // end
                         var luasan = {
                             series: [{ data: data_luasan }],
                             legend: {
@@ -377,7 +379,9 @@ $.ajax({
                                 fontFamily: 'Lexend, sans-serif',
                                 height: 345,
                                 type: 'treemap',
-
+                                toolbar: {
+                                    show: false,
+                                }
                             },
                             stroke: {
                                 width: 0,
@@ -395,13 +399,13 @@ $.ajax({
                             plotOptions: {
                                 treemap: {
                                     distributed: true,
-                                    enableShades: true,
+                                    enableShades: false,
 
                                 }
                             }
                         };
+
                         var administrasi = {
-                            
                             series: stackbarseri,
                             colors: ['#5E9338', '#FFC94D', '#F07C15', ],
                             chart: {
@@ -409,6 +413,9 @@ $.ajax({
                             type: 'bar',
                             height: 370,
                             stacked: true,
+                            toolbar: {
+                                show: false,
+                            }
                           },
                           plotOptions: {
                             bar: {
@@ -425,10 +432,7 @@ $.ajax({
                               }
                             },
                           },
-                          stroke: {
-                            width: 1,
-                            colors: ['#fff']
-                          },
+
                           xaxis: {
                             categories: stackbarkategori,
                           },
@@ -437,6 +441,7 @@ $.ajax({
                               text: undefined
                             },
                           },
+                        
                           fill: {
                             opacity: 1
                           },
