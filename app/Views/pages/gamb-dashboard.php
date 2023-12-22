@@ -544,7 +544,7 @@
                                 <div class="w-content">
                                     <div class="w-info">
                                         <p class="value" style="font-weight: 700;">
-                                            <span style="font-size: 30px;">Hai,</span> <?= user()->fullname; ?><span>.<br> Saat ini anda berada di halaman dashboard gambut. query datanya belum ready ya gaes, datanya belum masuk. Ini baru sample halaman.</span>
+                                            <span style="font-size: 30px;">Hai,</span> <?= user()->fullname; ?><span>.<br> Saat ini anda berada di halaman dashboard gambut.</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up">
                                                 <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
                                                 <polyline points="17 6 23 6 23 12"></polyline>
@@ -578,9 +578,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <a class="btn-add-balance">
-                                            SELAMAT DATANG! <strong><?= user()->fullname; ?></strong><br>
-                                            Saat ini anda berada di halaman dashboard gambut.</a>
+                                        <a class="btn-add-balance"></a>
                                     </div>
                                 </div>
                             </div>
@@ -624,39 +622,59 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-                        <div class="widget widget-chart-two">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-six">
                             <div class="widget-heading">
-                                <div class="">
-                                    <h5 class="">TOTAL DATA MASUK</h5>
+                                <h6 class="">RANGKUMAN DATA GAMBUT</h6>
+                                <div class="task-action">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="statistics" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="19" cy="12" r="1"></circle>
+                                                <circle cx="5" cy="12" r="1"></circle>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="widget-content">
-                                <div id="huhuhuhuhuhuhuhuhuh" class=""></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-                        <div class="widget widget-chart-two">
-                            <div class="widget-heading">
-                                <div class="">
-                                    <h5 class="">QUERY LAIN</h5>
+                            <div class="w-chart" style="margin-bottom: 16px;">
+                                <div class="w-chart-section">
+                                    <div class="w-detail" style="margin-top: -25px;">
+                                        <p class="w-title">Total Data Masuk</p>
+                                        <p class="w-stats" style="font-size: 15px;"><?= $totaldata; ?></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="widget-content">
-                                <div id="huhuhuhuhuhuhuhuhuh" class=""></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-                        <div class="widget widget-chart-two">
-                            <div class="widget-heading">
-                                <div class="">
-                                    <h5 class="">QUERY LAIN</h5>
+                                <div class="w-chart-section">
+                                    <div class="w-detail" style="margin-top: -25px;">
+                                        <p class="w-title">Perencanaan</p>
+                                        <p class="w-stats" style="font-size: 15px;"><?= $countalokasi; ?></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="widget-content">
-                                <div id="huhuhuhuhuhuhuhuhuh" class=""></div>
+                                <div class="w-chart-section">
+                                    <div class="w-detail" style="margin-top: -25px;">
+                                        <p class="w-title">Sasaran</p>
+                                        <p class="w-stats" style="font-size: 15px;"><?= $target; ?> Hektare</p>
+                                    </div>
+                                </div>
+                                <div class="w-chart-section">
+                                    <div class="w-detail" style="margin-top: -25px;">
+                                        <p class="w-title">Kawasan Terencana</p>
+                                        <p class="w-stats" style="font-size: 15px;"><?= $volume; ?></p>
+                                    </div>
+                                </div>
+                                <div class="w-chart-section">
+                                    <div class="w-detail" style="margin-top: -25px;">
+                                        <p class="w-title">Pelaksanaan</p>
+                                        <p class="w-stats" style="font-size: 15px;">0</p>
+                                    </div>
+                                </div>
+                                <div class="w-chart-section">
+                                    <div class="w-detail" style="margin-top: -25px;">
+                                        <p class="w-title">Monitoring & Evaluasi</p>
+                                        <p class="w-stats" style="font-size: 15px;">0</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

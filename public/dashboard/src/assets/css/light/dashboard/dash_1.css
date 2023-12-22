@@ -152,7 +152,7 @@
 */
 .widget.widget-six {
   padding: 22px 18px;
-  background: #fff;
+  background: #F6F4EF;
 }
 .widget.widget-six .widget-heading {
   display: flex;
@@ -180,7 +180,7 @@
 }
 .widget.widget-six .w-chart .w-chart-section .w-detail {
   position: absolute;
-  color: #fff;
+  color: #F6F4EF;
 }
 .widget.widget-six .w-chart .w-chart-section .w-title {
   font-size: 13px;
@@ -189,7 +189,7 @@
   color: #515365;
 }
 .widget.widget-six .w-chart .w-chart-section .w-stats {
-  color: #f8538d;
+  color: #F07C15;
   font-size: 20px;
   letter-spacing: 1px;
   margin-bottom: 0;
