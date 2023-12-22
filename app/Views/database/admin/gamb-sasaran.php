@@ -528,6 +528,22 @@
                                                         </div>
                                                     </div>
                                                     <div class="col">
+                                                        <label for="kodekhg">
+                                                            <p>Pilih kode KHG.</p>
+                                                        </label>
+                                                        <select class="form-select <?= ($validation->hasError('kodekhg')) ? 'is-invalid' : ''; ?>" id="kodekhg" name="kodekhg" value="<?= old('kodekhg'); ?>">
+                                                            <option disabled selected>Pilih...</option>
+                                                            <?php foreach ($khg as $var2) : ?>
+                                                                <option value="<?= $var2['kode_khg']; ?>"><?= $var2['kode_khg']; ?> - <?= $var2['nama']; ?></option>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            <?= $validation->getError('kodekhg'); ?>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
                                                         <label for="volume">
                                                             <p>Masukkan besaran volume.</p>
                                                         </label>
@@ -536,8 +552,6 @@
                                                             <?= $validation->getError('volume'); ?>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="row mb-3">
                                                     <div class="col">
                                                         <label for="satuan">
                                                             <p>Masukkan satuan volume.</p>
@@ -545,15 +559,6 @@
                                                         <input type="text" placeholder="Satuan..." class="form-control <?= ($validation->hasError('satuan')) ? 'is-invalid' : ''; ?>" id="satuan" name="satuan" value="<?= old('satuan'); ?>" autofocus>
                                                         <div class="invalid-feedback">
                                                             <?= $validation->getError('satuan'); ?>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <label for="deskripsi">
-                                                            <p>Masukkan deskripsi sasaran kegiatan.</p>
-                                                        </label>
-                                                        <input type="text" placeholder="Deskripsi..." class="form-control <?= ($validation->hasError('deskripsi')) ? 'is-invalid' : ''; ?>" id="deskripsi" name="deskripsi" value="<?= old('deskripsi'); ?>">
-                                                        <div class="invalid-feedback">
-                                                            <?= $validation->getError('deskripsi'); ?>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -579,9 +584,9 @@
                                             <th>No.</th>
                                             <th>Kode Dokumen</th>
                                             <th>Kode Sasaran</th>
-                                            <th>Volume</th>
+                                            <th>Kode KHG</th>
                                             <th>Satuan</th>
-                                            <th>Deskripsi</th>
+                                            <th>Volume</th>
                                             <th>Tindakan</th>
                                         </tr>
                                     </thead>
@@ -592,9 +597,9 @@
                                                 <td scope="row"><?= $no++; ?></td>
                                                 <td><?= $var['koderencana']; ?></td>
                                                 <td><?= $var['kode_target']; ?></td>
-                                                <td><?= $var['volume']; ?></td>
+                                                <td><?= $var['kode_khg']; ?></td>
                                                 <td><?= $var['satuan']; ?></td>
-                                                <td style="white-space: pre-line;"><?= $var['deskripsi']; ?></td>
+                                                <td><?= $var['volume']; ?></td>
                                                 <td>
                                                     <div class="btn-group" role="group">
                                                         <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#edit_2<?= $var['id']; ?>" title="Sunting Record">Sunting</button>
@@ -665,10 +670,10 @@
                                                     <input id="kodetarget" type="text" name="kodetarget" value="<?= $var['kode_target']; ?>" class="form-control">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="volume">
-                                                        <p>Sunting besaran volume.</p>
+                                                    <label for="kodekhg">
+                                                        <p>Sunting kode KHG.</p>
                                                     </label>
-                                                    <input id="volume" type="text" name="volume" value="<?= $var['volume']; ?>" class="form-control">
+                                                    <input id="kodekhg" type="text" name="kodekhg" value="<?= $var['kode_khg']; ?>" class="form-control">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="satuan">
@@ -677,10 +682,10 @@
                                                     <input id="satuan" type="text" name="satuan" value="<?= $var['satuan']; ?>" class="form-control">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="deskripsi">
-                                                        <p>Sunting deskripsi kegiatan.</p>
+                                                    <label for="volume">
+                                                        <p>Sunting besaran volume.</p>
                                                     </label>
-                                                    <input id="deskripsi" type="text" name="deskripsi" value="<?= $var['deskripsi']; ?>" class="form-control">
+                                                    <input id="volume" type="text" name="volume" value="<?= $var['volume']; ?>" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -720,9 +725,9 @@
                                                 </div>
                                                 <p><strong>Kode Rencana : </strong><?= $var['koderencana']; ?></p>
                                                 <p><strong>Kode Sasaran : </strong><?= $var['kode_target']; ?></p>
+                                                <p><strong>Kode KHG : </strong><?= $var['kode_khg']; ?></p>
                                                 <p><strong>Volume : </strong><?= $var['volume']; ?></p>
                                                 <p><strong>Satuan : </strong><?= $var['satuan']; ?></p>
-                                                <p><strong>Deskripsi : </strong><?= $var['deskripsi']; ?></p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-sm" data-bs-dismiss="modal"><i class="flaticon-cancel-12"></i>Batal</button>

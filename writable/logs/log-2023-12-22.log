@@ -1,0 +1,558 @@
+ERROR - 2023-12-22 00:36:56 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (13, akundukuh@gmail.com, akundukuh, null, $2y$10$JYTXHPr1U1WZaJA7pL1aBeVJbON0MhFnKysb7A7AhHpkT9ehasQuG, null, null, null, null, null, null, 1, 0, 2023-12-22 00:36:56, 2023-12-22 00:36:56, null). in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "us...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-12-22 00:36:56 --> pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (13, akundukuh@gmail.com, akundukuh, null, $2y$10$JYTXHPr1U1WZaJA7pL1aBeVJbON0MhFnKysb7A7AhHpkT9ehasQuG, null, null, null, null, null, null, 1, 0, 2023-12-22 00:36:56, 2023-12-22 00:36:56, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (13, akundukuh@gmail.com, akundukuh, null, $2y$10$JYTXHPr1U1WZaJA7pL1aBeVJbON0MhFnKysb7A7AhHpkT9ehasQuG, null, null, null, null, null, null, 1, 0, 2023-12-22 00:36:56, 2023-12-22 00:36:56, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$JYTXHPr1U1WZaJA7pL1aBeVJbON0MhFnKysb7A7AhHpkT9ehasQuG\', \'2023-12-22 00:36:56\', \'2023-12-22 00:36:56\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$JYTXHPr1U1WZaJA7pL1aBeVJbON0MhFnKysb7A7AhHpkT9ehasQuG\', \'2023-12-22 00:36:56\', \'2023-12-22 00:36:56\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$JYTXHPr1U1WZaJA7pL1aBeVJbON0MhFnKysb7A7AhHpkT9ehasQuG\', \'2023-12-22 00:36:56\', \'2023-12-22 00:36:56\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (:email:, :username:, :active:, :password_hash:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 00:40:38 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (14, akundukuh@gmail.com, akundukuh, null, $2y$10$xDSyM8Kd0DJPJQO7eb3pmOi.pMQ469k8oSNutBrB0pAN1K6i5Myta, null, null, null, null, null, null, 1, 0, 2023-12-22 00:40:38, 2023-12-22 00:40:38, null). in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "us...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-12-22 00:40:38 --> pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (14, akundukuh@gmail.com, akundukuh, null, $2y$10$xDSyM8Kd0DJPJQO7eb3pmOi.pMQ469k8oSNutBrB0pAN1K6i5Myta, null, null, null, null, null, null, 1, 0, 2023-12-22 00:40:38, 2023-12-22 00:40:38, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (14, akundukuh@gmail.com, akundukuh, null, $2y$10$xDSyM8Kd0DJPJQO7eb3pmOi.pMQ469k8oSNutBrB0pAN1K6i5Myta, null, null, null, null, null, null, 1, 0, 2023-12-22 00:40:38, 2023-12-22 00:40:38, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$xDSyM8Kd0DJPJQO7eb3pmOi.pMQ469k8oSNutBrB0pAN1K6i5Myta\', \'2023-12-22 00:40:38\', \'2023-12-22 00:40:38\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$xDSyM8Kd0DJPJQO7eb3pmOi.pMQ469k8oSNutBrB0pAN1K6i5Myta\', \'2023-12-22 00:40:38\', \'2023-12-22 00:40:38\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$xDSyM8Kd0DJPJQO7eb3pmOi.pMQ469k8oSNutBrB0pAN1K6i5Myta\', \'2023-12-22 00:40:38\', \'2023-12-22 00:40:38\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (:email:, :username:, :active:, :password_hash:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 02:47:31 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (15, akundukuh@gmail.com, akundukuh, null, $2y$10$WP1m2349M250GlVHPk5SDO0ZjDyQB7FqW0kNwWZMwTO.NiH7iQ6ky, null, null, null, null, null, null, 1, 0, 2023-12-22 02:47:31, 2023-12-22 02:47:31, null). in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "us...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-12-22 02:47:31 --> pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (15, akundukuh@gmail.com, akundukuh, null, $2y$10$WP1m2349M250GlVHPk5SDO0ZjDyQB7FqW0kNwWZMwTO.NiH7iQ6ky, null, null, null, null, null, null, 1, 0, 2023-12-22 02:47:31, 2023-12-22 02:47:31, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (15, akundukuh@gmail.com, akundukuh, null, $2y$10$WP1m2349M250GlVHPk5SDO0ZjDyQB7FqW0kNwWZMwTO.NiH7iQ6ky, null, null, null, null, null, null, 1, 0, 2023-12-22 02:47:31, 2023-12-22 02:47:31, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$WP1m2349M250GlVHPk5SDO0ZjDyQB7FqW0kNwWZMwTO.NiH7iQ6ky\', \'2023-12-22 02:47:31\', \'2023-12-22 02:47:31\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$WP1m2349M250GlVHPk5SDO0ZjDyQB7FqW0kNwWZMwTO.NiH7iQ6ky\', \'2023-12-22 02:47:31\', \'2023-12-22 02:47:31\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$WP1m2349M250GlVHPk5SDO0ZjDyQB7FqW0kNwWZMwTO.NiH7iQ6ky\', \'2023-12-22 02:47:31\', \'2023-12-22 02:47:31\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (:email:, :username:, :active:, :password_hash:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 02:56:49 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (16, akundukuh@gmail.com, akundukuh, null, $2y$10$l93g.RdoLAvW9M5Udr.pBOu0gNagaEKS1SCQ9Js1njnvlRJXADmvi, null, null, null, null, null, null, 1, 0, 2023-12-22 02:56:49, 2023-12-22 02:56:49, null). in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "us...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-12-22 02:56:49 --> pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (16, akundukuh@gmail.com, akundukuh, null, $2y$10$l93g.RdoLAvW9M5Udr.pBOu0gNagaEKS1SCQ9Js1njnvlRJXADmvi, null, null, null, null, null, null, 1, 0, 2023-12-22 02:56:49, 2023-12-22 02:56:49, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (16, akundukuh@gmail.com, akundukuh, null, $2y$10$l93g.RdoLAvW9M5Udr.pBOu0gNagaEKS1SCQ9Js1njnvlRJXADmvi, null, null, null, null, null, null, 1, 0, 2023-12-22 02:56:49, 2023-12-22 02:56:49, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$l93g.RdoLAvW9M5Udr.pBOu0gNagaEKS1SCQ9Js1njnvlRJXADmvi\', \'2023-12-22 02:56:49\', \'2023-12-22 02:56:49\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$l93g.RdoLAvW9M5Udr.pBOu0gNagaEKS1SCQ9Js1njnvlRJXADmvi\', \'2023-12-22 02:56:49\', \'2023-12-22 02:56:49\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$l93g.RdoLAvW9M5Udr.pBOu0gNagaEKS1SCQ9Js1njnvlRJXADmvi\', \'2023-12-22 02:56:49\', \'2023-12-22 02:56:49\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (:email:, :username:, :active:, :password_hash:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 03:03:23 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (17, akundukuh@gmail.com, akundukuh, null, $2y$10$/uvTAHYn6wwbP/oUkAg0z.YN7OdkhzSLIMgZ9/gRE9xs7Uy48XoWe, null, null, null, null, null, null, 1, 0, 2023-12-22 03:03:23, 2023-12-22 03:03:23, null). in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "us...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-12-22 03:03:23 --> pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (17, akundukuh@gmail.com, akundukuh, null, $2y$10$/uvTAHYn6wwbP/oUkAg0z.YN7OdkhzSLIMgZ9/gRE9xs7Uy48XoWe, null, null, null, null, null, null, 1, 0, 2023-12-22 03:03:23, 2023-12-22 03:03:23, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (17, akundukuh@gmail.com, akundukuh, null, $2y$10$/uvTAHYn6wwbP/oUkAg0z.YN7OdkhzSLIMgZ9/gRE9xs7Uy48XoWe, null, null, null, null, null, null, 1, 0, 2023-12-22 03:03:23, 2023-12-22 03:03:23, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$/uvTAHYn6wwbP/oUkAg0z.YN7OdkhzSLIMgZ9/gRE9xs7Uy48XoWe\', \'2023-12-22 03:03:23\', \'2023-12-22 03:03:23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$/uvTAHYn6wwbP/oUkAg0z.YN7OdkhzSLIMgZ9/gRE9xs7Uy48XoWe\', \'2023-12-22 03:03:23\', \'2023-12-22 03:03:23\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'akundukuh@gmail.com\', \'akundukuh\', \'1\', \'$2y$10$/uvTAHYn6wwbP/oUkAg0z.YN7OdkhzSLIMgZ9/gRE9xs7Uy48XoWe\', \'2023-12-22 03:03:23\', \'2023-12-22 03:03:23\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (:email:, :username:, :active:, :password_hash:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 03:08:33 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (19, aaaaa@aaa.a, aaaaa, null, $2y$10$csMLQDX1CS1RVJQ2aTuvoen/yiM6x/BWwbvZ4e20695nTf1w7.2ae, null, null, null, null, null, null, 1, 0, 2023-12-22 03:08:33, 2023-12-22 03:08:33, null). in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "us...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-12-22 03:08:33 --> pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (19, aaaaa@aaa.a, aaaaa, null, $2y$10$csMLQDX1CS1RVJQ2aTuvoen/yiM6x/BWwbvZ4e20695nTf1w7.2ae, null, null, null, null, null, null, 1, 0, 2023-12-22 03:08:33, 2023-12-22 03:08:33, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (19, aaaaa@aaa.a, aaaaa, null, $2y$10$csMLQDX1CS1RVJQ2aTuvoen/yiM6x/BWwbvZ4e20695nTf1w7.2ae, null, null, null, null, null, null, 1, 0, 2023-12-22 03:08:33, 2023-12-22 03:08:33, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'aaaaa@aaa.a\', \'aaaaa\', \'1\', \'$2y$10$csMLQDX1CS1RVJQ2aTuvoen/yiM6x/BWwbvZ4e20695nTf1w7.2ae\', \'2023-12-22 03:08:33\', \'2023-12-22 03:08:33\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'aaaaa@aaa.a\', \'aaaaa\', \'1\', \'$2y$10$csMLQDX1CS1RVJQ2aTuvoen/yiM6x/BWwbvZ4e20695nTf1w7.2ae\', \'2023-12-22 03:08:33\', \'2023-12-22 03:08:33\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (\'aaaaa@aaa.a\', \'aaaaa\', \'1\', \'$2y$10$csMLQDX1CS1RVJQ2aTuvoen/yiM6x/BWwbvZ4e20695nTf1w7.2ae\', \'2023-12-22 03:08:33\', \'2023-12-22 03:08:33\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("email", "username", "active", "password_hash", "created_at", "updated_at") VALUES (:email:, :username:, :active:, :password_hash:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Pengguna.php(77): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pengguna->simpan_pengguna()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 03:21:26 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (20, akundukuh@gmail.com, akundukuh, null, $2y$10$6PSRGW2cjeCGhZMunE746.FQmAsMg9h3gkF68mUC9Ux3SU.bzE7TS, null, null, null, null, null, null, 1, 0, 2023-12-22 03:21:26, 2023-12-22 03:21:26, null). in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #169, 'INSERT INTO "us...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(659): CodeIgniter\Model->insert(Object(Myth\Auth\Entities\User), false)
+#9 D:\xampp\htdocs\BRGM\vendor\myth\auth\src\Controllers\AuthController.php(223): CodeIgniter\BaseModel->save(Object(Myth\Auth\Entities\User))
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): Myth\Auth\Controllers\AuthController->attemptRegister()
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-12-22 03:21:26 --> pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (20, akundukuh@gmail.com, akundukuh, null, $2y$10$6PSRGW2cjeCGhZMunE746.FQmAsMg9h3gkF68mUC9Ux3SU.bzE7TS, null, null, null, null, null, null, 1, 0, 2023-12-22 03:21:26, 2023-12-22 03:21:26, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (20, akundukuh@gmail.com, akundukuh, null, $2y$10$6PSRGW2cjeCGhZMunE746.FQmAsMg9h3gkF68mUC9Ux3SU.bzE7TS, null, null, null, null, null, null, 1, 0, 2023-12-22 03:21:26, 2023-12-22 03:21:26, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "users" ("password_hash", "reset_hash", "reset_at", "reset_expires", "email", "username", "active", "activate_hash", "created_at", "updated_at") VALUES (\'$2y$10$6PSRGW2cjeCGhZMunE746.FQmAsMg9h3gkF68mUC9Ux3SU.bzE7TS\', NULL, NULL, NULL, \'akundukuh@gmail.com\', \'akundukuh\', 1, NULL, \'2023-12-22 03:21:26\', \'2023-12-22 03:21:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("password_hash", "reset_hash", "reset_at", "reset_expires", "email", "username", "active", "activate_hash", "created_at", "updated_at") VALUES (\'$2y$10$6PSRGW2cjeCGhZMunE746.FQmAsMg9h3gkF68mUC9Ux3SU.bzE7TS\', NULL, NULL, NULL, \'akundukuh@gmail.com\', \'akundukuh\', 1, NULL, \'2023-12-22 03:21:26\', \'2023-12-22 03:21:26\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("password_hash", "reset_hash", "reset_at", "reset_expires", "email", "username", "active", "activate_hash", "created_at", "updated_at") VALUES (\'$2y$10$6PSRGW2cjeCGhZMunE746.FQmAsMg9h3gkF68mUC9Ux3SU.bzE7TS\', NULL, NULL, NULL, \'akundukuh@gmail.com\', \'akundukuh\', 1, NULL, \'2023-12-22 03:21:26\', \'2023-12-22 03:21:26\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("password_hash", "reset_hash", "reset_at", "reset_expires", "email", "username", "active", "activate_hash", "created_at", "updated_at") VALUES (:password_hash:, :reset_hash:, :reset_at:, :reset_expires:, :email:, :username:, :active:, :activate_hash:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert(Object(Myth\Auth\Entities\User), false)
+10 VENDORPATH\myth\auth\src\Controllers\AuthController.php(223): CodeIgniter\BaseModel->save(Object(Myth\Auth\Entities\User))
+11 SYSTEMPATH\CodeIgniter.php(927): Myth\Auth\Controllers\AuthController->attemptRegister()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 03:24:06 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (21, akundukuh@gmail.com, akundukuh, null, $2y$10$NJyv6QTeWZuiXfmqm3dzeuI57jH4MPJha3mS8srRXqyqitaVH12Bi, null, null, null, null, null, null, 1, 0, 2023-12-22 03:24:06, 2023-12-22 03:24:06, null). in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #169, 'INSERT INTO "us...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(659): CodeIgniter\Model->insert(Object(Myth\Auth\Entities\User), false)
+#9 D:\xampp\htdocs\BRGM\vendor\myth\auth\src\Controllers\AuthController.php(223): CodeIgniter\BaseModel->save(Object(Myth\Auth\Entities\User))
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): Myth\Auth\Controllers\AuthController->attemptRegister()
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-12-22 03:24:06 --> pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (21, akundukuh@gmail.com, akundukuh, null, $2y$10$NJyv6QTeWZuiXfmqm3dzeuI57jH4MPJha3mS8srRXqyqitaVH12Bi, null, null, null, null, null, null, 1, 0, 2023-12-22 03:24:06, 2023-12-22 03:24:06, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;fullname&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (21, akundukuh@gmail.com, akundukuh, null, $2y$10$NJyv6QTeWZuiXfmqm3dzeuI57jH4MPJha3mS8srRXqyqitaVH12Bi, null, null, null, null, null, null, 1, 0, 2023-12-22 03:24:06, 2023-12-22 03:24:06, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "users" ("password_hash", "reset_hash", "reset_at", "reset_expires", "email", "username", "active", "activate_hash", "created_at", "updated_at") VALUES (\'$2y$10$NJyv6QTeWZuiXfmqm3dzeuI57jH4MPJha3mS8srRXqyqitaVH12Bi\', NULL, NULL, NULL, \'akundukuh@gmail.com\', \'akundukuh\', 1, NULL, \'2023-12-22 03:24:06\', \'2023-12-22 03:24:06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("password_hash", "reset_hash", "reset_at", "reset_expires", "email", "username", "active", "activate_hash", "created_at", "updated_at") VALUES (\'$2y$10$NJyv6QTeWZuiXfmqm3dzeuI57jH4MPJha3mS8srRXqyqitaVH12Bi\', NULL, NULL, NULL, \'akundukuh@gmail.com\', \'akundukuh\', 1, NULL, \'2023-12-22 03:24:06\', \'2023-12-22 03:24:06\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("password_hash", "reset_hash", "reset_at", "reset_expires", "email", "username", "active", "activate_hash", "created_at", "updated_at") VALUES (\'$2y$10$NJyv6QTeWZuiXfmqm3dzeuI57jH4MPJha3mS8srRXqyqitaVH12Bi\', NULL, NULL, NULL, \'akundukuh@gmail.com\', \'akundukuh\', 1, NULL, \'2023-12-22 03:24:06\', \'2023-12-22 03:24:06\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("password_hash", "reset_hash", "reset_at", "reset_expires", "email", "username", "active", "activate_hash", "created_at", "updated_at") VALUES (:password_hash:, :reset_hash:, :reset_at:, :reset_expires:, :email:, :username:, :active:, :activate_hash:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert(Object(Myth\Auth\Entities\User), false)
+10 VENDORPATH\myth\auth\src\Controllers\AuthController.php(223): CodeIgniter\BaseModel->save(Object(Myth\Auth\Entities\User))
+11 SYSTEMPATH\CodeIgniter.php(927): Myth\Auth\Controllers\AuthController->attemptRegister()
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 03:31:52 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...get&quot;, &quot;tb_target&quot;.&quot;volume&quot;, &quot;tb_target&quot;.&quot;satuan&quot;, &quot;tb_target...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSasaran.php(25): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSasaran->index('12')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaran))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-22 03:31:52 --> pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...get&quot;, &quot;tb_target&quot;.&quot;volume&quot;, &quot;tb_target&quot;.&quot;satuan&quot;, &quot;tb_target...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...get&quot;, &quot;tb_target&quot;.&quot;volume&quot;, &quot;tb_target&quot;.&quot;satuan&quot;, &quot;tb_target...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id", "tb_target"."kode_target", "tb_target"."volume", "tb_target"."satuan", "tb_target"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id", "tb_target"."kode_target", "tb_target"."volume", "tb_target"."satuan", "tb_target"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'12\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id", "tb_target"."kode_target", "tb_target"."volume", "tb_target"."satuan", "tb_target"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'12\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id", "tb_target"."kode_target", "tb_target"."volume", "tb_target"."satuan", "tb_target"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutSasaran.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSasaran->index('12')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaran))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-22 03:43:29 --> Undefined array key "nama_khg"
+in APPPATH\Views\database\admin\gamb-sasaran.php on line 537.
+ 1 APPPATH\Views\database\admin\gamb-sasaran.php(537): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_khg"', 'APPPATH\\Views\\database\\admin\\gamb-sasaran.php', 537)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\admin\\gamb-sasaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/admin/gamb-sasaran', [], true)
+ 5 APPPATH\Controllers\AdmGambutSasaran.php(52): view('database/admin/gamb-sasaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSasaran->index('12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaran))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 03:44:51 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_target_pkey&quot;
+DETAIL:  Key (id)=(19) already exists. in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'INSERT INTO "tb...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 D:\xampp\htdocs\BRGM\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 D:\xampp\htdocs\BRGM\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#7 D:\xampp\htdocs\BRGM\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 D:\xampp\htdocs\BRGM\system\BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#9 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSasaran.php(88): CodeIgniter\BaseModel->save(Array)
+#10 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSasaran->simpan_sasaran('12')
+#11 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaran))
+#12 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2023-12-22 03:44:51 --> pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_target_pkey&quot;
+DETAIL:  Key (id)=(19) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;tb_target_pkey&quot;
+DETAIL:  Key (id)=(19) already exists.', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tb_target" ("kode_rencana", "kode_target", "volume", "satuan") VALUES (\'RTTRGKalBar.2023\', \'qqqq\', \'11111\', \'aaaa\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb_target" ("kode_rencana", "kode_target", "volume", "satuan") VALUES (\'RTTRGKalBar.2023\', \'qqqq\', \'11111\', \'aaaa\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb_target" ("kode_rencana", "kode_target", "volume", "satuan") VALUES (\'RTTRGKalBar.2023\', \'qqqq\', \'11111\', \'aaaa\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb_target" ("kode_rencana", "kode_target", "volume", "satuan") VALUES (:kode_rencana:, :kode_target:, :volume:, :satuan:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\AdmGambutSasaran.php(88): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSasaran->simpan_sasaran('12')
+12 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaran))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 03:51:10 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...get&quot;, &quot;tb_target&quot;.&quot;volume&quot;, &quot;tb_target&quot;.&quot;satuan&quot;, &quot;tb_target...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\UserGambutSasaran.php(25): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\UserGambutSasaran->index('12')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutSasaran))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-22 03:51:10 --> pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...get&quot;, &quot;tb_target&quot;.&quot;volume&quot;, &quot;tb_target&quot;.&quot;satuan&quot;, &quot;tb_target...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...get&quot;, &quot;tb_target&quot;.&quot;volume&quot;, &quot;tb_target&quot;.&quot;satuan&quot;, &quot;tb_target...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id", "tb_target"."kode_target", "tb_target"."volume", "tb_target"."satuan", "tb_target"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id", "tb_target"."kode_target", "tb_target"."volume", "tb_target"."satuan", "tb_target"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'12\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id", "tb_target"."kode_target", "tb_target"."volume", "tb_target"."satuan", "tb_target"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = \'12\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id", "tb_target"."kode_target", "tb_target"."volume", "tb_target"."satuan", "tb_target"."deskripsi"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+WHERE "tb_rencana"."id" = :tb_rencana.id:', [...], false)
+ 6 APPPATH\Controllers\UserGambutSasaran.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutSasaran->index('12')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutSasaran))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-12-22 03:54:37 --> Undefined array key "kode_rencana"
+in APPPATH\Views\database\user\gamb-sasaran.php on line 567.
+ 1 APPPATH\Views\database\user\gamb-sasaran.php(567): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_rencana"', 'APPPATH\\Views\\database\\user\\gamb-sasaran.php', 567)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\user\\gamb-sasaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/user/gamb-sasaran', [], true)
+ 5 APPPATH\Controllers\UserGambutSasaran.php(47): view('database/user/gamb-sasaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutSasaran->index('12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutSasaran))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 03:55:21 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...etarget&quot;, &quot;tb_target&quot;.&quot;satuan&quot; as &quot;satuantarget&quot;, &quot;tb_target...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\UserGambutSasaranInv.php(31): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\UserGambutSasaranInv->index('19')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutSasaranInv))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-22 03:55:21 --> pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...etarget&quot;, &quot;tb_target&quot;.&quot;satuan&quot; as &quot;satuantarget&quot;, &quot;tb_target...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...etarget&quot;, &quot;tb_target&quot;.&quot;satuan&quot; as &quot;satuantarget&quot;, &quot;tb_target...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id" as "idtarget", "tb_target"."kode_target", "tb_target"."volume" as "volumetarget", "tb_target"."satuan" as "satuantarget", "tb_target"."deskripsi", "tb_output_target"."id", "tb_output_target"."kode_output_target", "tb_output_target"."kode_hru", "tb_output_target"."satuan", "tb_output_target"."volume"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target" = "tb_target"."kode_target"
+WHERE "tb_target"."id" = \'19\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id" as "idtarget", "tb_target"."kode_target", "tb_target"."volume" as "volumetarget", "tb_target"."satuan" as "satuantarget", "tb_target"."deskripsi", "tb_output_target"."id", "tb_output_target"."kode_output_target", "tb_output_target"."kode_hru", "tb_output_target"."satuan", "tb_output_target"."volume"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target" = "tb_target"."kode_target"
+WHERE "tb_target"."id" = \'19\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id" as "idtarget", "tb_target"."kode_target", "tb_target"."volume" as "volumetarget", "tb_target"."satuan" as "satuantarget", "tb_target"."deskripsi", "tb_output_target"."id", "tb_output_target"."kode_output_target", "tb_output_target"."kode_hru", "tb_output_target"."satuan", "tb_output_target"."volume"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target" = "tb_target"."kode_target"
+WHERE "tb_target"."id" = \'19\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id" as "idtarget", "tb_target"."kode_target", "tb_target"."volume" as "volumetarget", "tb_target"."satuan" as "satuantarget", "tb_target"."deskripsi", "tb_output_target"."id", "tb_output_target"."kode_output_target", "tb_output_target"."kode_hru", "tb_output_target"."satuan", "tb_output_target"."volume"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target" = "tb_target"."kode_target"
+WHERE "tb_target"."id" = :tb_target.id:', [...], false)
+ 6 APPPATH\Controllers\UserGambutSasaranInv.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserGambutSasaranInv->index('19')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserGambutSasaranInv))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-12-22 04:12:35 --> ErrorException: pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...etarget&quot;, &quot;tb_target&quot;.&quot;satuan&quot; as &quot;satuantarget&quot;, &quot;tb_target...
+                                                             ^ in D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'D:\\xampp\\htdocs...', 140)
+#1 D:\xampp\htdocs\BRGM\system\Database\Postgre\Connection.php(140): pg_query(Resource id #173, 'SELECT "tb_renc...')
+#2 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_renc...')
+#3 D:\xampp\htdocs\BRGM\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_renc...')
+#4 D:\xampp\htdocs\BRGM\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_renc...', Array, false)
+#5 D:\xampp\htdocs\BRGM\app\Controllers\AdmGambutSasaranClaim.php(30): CodeIgniter\Database\BaseBuilder->get()
+#6 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(927): App\Controllers\AdmGambutSasaranClaim->index('558')
+#7 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaranClaim))
+#8 D:\xampp\htdocs\BRGM\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\BRGM\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\BRGM\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-12-22 04:12:35 --> pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...etarget&quot;, &quot;tb_target&quot;.&quot;satuan&quot; as &quot;satuantarget&quot;, &quot;tb_target...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column tb_target.deskripsi does not exist
+LINE 1: ...etarget&quot;, &quot;tb_target&quot;.&quot;satuan&quot; as &quot;satuantarget&quot;, &quot;tb_target...
+                                                             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id" as "idtarget", "tb_target"."kode_target", "tb_target"."volume" as "volumetarget", "tb_target"."satuan" as "satuantarget", "tb_target"."deskripsi", "tb_output_target"."id" as "idtargetinv", "tb_output_target"."kode_output_target" as "kodeoutputtarget", "tb_output_target"."kode_hru", "tb_output_target"."satuan", "tb_output_target"."volume", "tb_outcome_target"."id", "tb_outcome_target"."kode_output_target", "tb_outcome_target"."kode_outcome_target", "tb_outcome_target"."satuan", "tb_outcome_target"."volume"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target" = "tb_target"."kode_target"
+JOIN "tb_outcome_target" ON "tb_outcome_target"."kode_output_target" = "tb_output_target"."kode_output_target"
+WHERE "tb_output_target"."id" = \'558\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id" as "idtarget", "tb_target"."kode_target", "tb_target"."volume" as "volumetarget", "tb_target"."satuan" as "satuantarget", "tb_target"."deskripsi", "tb_output_target"."id" as "idtargetinv", "tb_output_target"."kode_output_target" as "kodeoutputtarget", "tb_output_target"."kode_hru", "tb_output_target"."satuan", "tb_output_target"."volume", "tb_outcome_target"."id", "tb_outcome_target"."kode_output_target", "tb_outcome_target"."kode_outcome_target", "tb_outcome_target"."satuan", "tb_outcome_target"."volume"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target" = "tb_target"."kode_target"
+JOIN "tb_outcome_target" ON "tb_outcome_target"."kode_output_target" = "tb_output_target"."kode_output_target"
+WHERE "tb_output_target"."id" = \'558\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id" as "idtarget", "tb_target"."kode_target", "tb_target"."volume" as "volumetarget", "tb_target"."satuan" as "satuantarget", "tb_target"."deskripsi", "tb_output_target"."id" as "idtargetinv", "tb_output_target"."kode_output_target" as "kodeoutputtarget", "tb_output_target"."kode_hru", "tb_output_target"."satuan", "tb_output_target"."volume", "tb_outcome_target"."id", "tb_outcome_target"."kode_output_target", "tb_outcome_target"."kode_outcome_target", "tb_outcome_target"."satuan", "tb_outcome_target"."volume"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target" = "tb_target"."kode_target"
+JOIN "tb_outcome_target" ON "tb_outcome_target"."kode_output_target" = "tb_output_target"."kode_output_target"
+WHERE "tb_output_target"."id" = \'558\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT "tb_rencana"."kode_rencana" as "koderencana", "tb_rencana"."id" as "idrencana", "tb_rencana"."judul", "tb_target"."id" as "idtarget", "tb_target"."kode_target", "tb_target"."volume" as "volumetarget", "tb_target"."satuan" as "satuantarget", "tb_target"."deskripsi", "tb_output_target"."id" as "idtargetinv", "tb_output_target"."kode_output_target" as "kodeoutputtarget", "tb_output_target"."kode_hru", "tb_output_target"."satuan", "tb_output_target"."volume", "tb_outcome_target"."id", "tb_outcome_target"."kode_output_target", "tb_outcome_target"."kode_outcome_target", "tb_outcome_target"."satuan", "tb_outcome_target"."volume"
+FROM "tb_rencana"
+JOIN "tb_target" ON "tb_target"."kode_rencana" = "tb_rencana"."kode_rencana"
+JOIN "tb_output_target" ON "tb_output_target"."kode_target" = "tb_target"."kode_target"
+JOIN "tb_outcome_target" ON "tb_outcome_target"."kode_output_target" = "tb_output_target"."kode_output_target"
+WHERE "tb_output_target"."id" = :tb_output_target.id:', [...], false)
+ 6 APPPATH\Controllers\AdmGambutSasaranClaim.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AdmGambutSasaranClaim->index('558')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdmGambutSasaranClaim))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -4,22 +4,26 @@ namespace App\Controllers;
 
 use \App\Models\GambRencanaModel;
 use \App\Models\GambTargetModel;
+use \App\Models\GambKhgModel;
 
 class AdmGambutSasaran extends BaseController
 {
     protected $GambTargetModel;
     protected $GambRencanaModel;
+    protected $GambKhgModel;
     public function __construct()
     {
         $this->GambTargetModel = new GambTargetModel();
         $this->GambRencanaModel = new GambRencanaModel();
+        $this->GambKhgModel = new GambKhgModel();
     }
     public function index($idrencana)
     {
 
         $db = \Config\Database::connect();
         $data = $db->table('tb_rencana');
-        $data->select('tb_rencana.kode_rencana as koderencana, tb_rencana.id as idrencana,tb_rencana.judul, tb_target.id, tb_target.kode_target, tb_target.volume, tb_target.satuan, tb_target.deskripsi');
+        $data->select('tb_rencana.kode_rencana as koderencana, tb_rencana.id as idrencana,tb_rencana.judul, 
+        tb_target.id, tb_target.kode_target, tb_target.volume, tb_target.satuan, tb_target.kode_khg');
         $data->join('tb_target', 'tb_target.kode_rencana = tb_rencana.kode_rencana');
         $data->where('tb_rencana.id', $idrencana);
         $query = $data->get();
@@ -36,8 +40,10 @@ class AdmGambutSasaran extends BaseController
         // dd($sasaran);
 
         $doc = $this->GambRencanaModel->findAll();
+        $khg = $this->GambKhgModel->findAll();
         $data = [
             'doc' => $doc,
+            'khg' => $khg,
             'doc2' => $doc2,
             'sasaran' => $sasaran,
             'title' => 'SIGAMMA | Data Rencana Kegiatan Gambut',
@@ -77,9 +83,9 @@ class AdmGambutSasaran extends BaseController
         $this->GambTargetModel->save([
             'kode_rencana' => $this->request->getVar('koderencana'),
             'kode_target' => $this->request->getVar('kodetarget'),
+            'kode_khg' => $this->request->getVar('kodekhg'),
             'volume' => $this->request->getVar('volume'),
             'satuan' => $this->request->getVar('satuan'),
-            'deskripsi' => $this->request->getVar('deskripsi'),
         ]);
         session()->setFlashdata(['info' => 'success', 'judul' => 'MANTAP KAWAN!👍', 'pesan' => 'Data sudah tersimpan. 👍']);
         return redirect()->to('admin/gambut/rencana/sasaran/' . $idrencana);
@@ -109,9 +115,9 @@ class AdmGambutSasaran extends BaseController
             'id' => $id,
             'kode_rencana' => $this->request->getVar('koderencana'),
             'kode_target' => $this->request->getVar('kodetarget'),
+            'kode_khg' => $this->request->getVar('kodekhg'),
             'volume' => $this->request->getVar('volume'),
             'satuan' => $this->request->getVar('satuan'),
-            'deskripsi' => $this->request->getVar('deskripsi'),
         ]);
         session()->setFlashdata(['info' => 'success', 'judul' => 'MANTAP KAWAN!👍', 'pesan' => 'Data telah diperbarui. 👍']);
         return redirect()->to('admin/gambut/rencana/sasaran/' . $idrencana);

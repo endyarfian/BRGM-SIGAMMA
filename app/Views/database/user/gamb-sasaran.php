@@ -550,10 +550,11 @@
                                     <thead>
                                         <tr>
                                             <th>No.</th>
+                                            <th>Kode Rencana</th>
                                             <th>Kode Sasaran</th>
-                                            <th>Volume</th>
+                                            <th>Kode KHG</th>
                                             <th>Satuan</th>
-                                            <th>Deskripsi</th>
+                                            <th>Volume</th>
                                             <th>Tindakan</th>
                                         </tr>
                                     </thead>
@@ -562,10 +563,11 @@
                                         <?php foreach ($sasaran as $var) : ?>
                                             <tr>
                                                 <td scope="row"><?= $no++; ?></td>
+                                                <td><?= $var['koderencana']; ?></td>
                                                 <td><?= $var['kode_target']; ?></td>
-                                                <td><?= $var['volume']; ?></td>
+                                                <td><?= $var['kode_khg']; ?></td>
                                                 <td><?= $var['satuan']; ?></td>
-                                                <td style="white-space: pre-line;"><?= $var['deskripsi']; ?></td>
+                                                <td><?= $var['volume']; ?></td>
                                                 <td>
                                                     <a href="<?= base_url('/gambut/rencana/sasaran-intervensi/'); ?>/<?= $var['id']; ?>" type="button" class="btn btn-outline-success" title="Data Sasatan Intervensi">
                                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

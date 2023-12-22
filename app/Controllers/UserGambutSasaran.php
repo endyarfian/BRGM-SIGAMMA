@@ -19,7 +19,8 @@ class UserGambutSasaran extends BaseController
 
         $db = \Config\Database::connect();
         $data = $db->table('tb_rencana');
-        $data->select('tb_rencana.kode_rencana as koderencana, tb_rencana.id as idrencana,tb_rencana.judul, tb_target.id, tb_target.kode_target, tb_target.volume, tb_target.satuan, tb_target.deskripsi');
+        $data->select('tb_rencana.kode_rencana as koderencana, tb_rencana.id as idrencana,tb_rencana.judul, 
+        tb_target.id, tb_target.kode_target, tb_target.volume, tb_target.satuan, tb_target.kode_khg');
         $data->join('tb_target', 'tb_target.kode_rencana = tb_rencana.kode_rencana');
         $data->where('tb_rencana.id', $idrencana);
         $query = $data->get();

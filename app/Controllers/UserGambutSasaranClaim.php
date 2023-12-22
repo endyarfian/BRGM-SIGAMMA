@@ -20,7 +20,7 @@ class UserGambutSasaranClaim extends BaseController
         $db = \Config\Database::connect();
         $data = $db->table('tb_rencana');
         $data->select('tb_rencana.kode_rencana as koderencana, tb_rencana.id as idrencana,tb_rencana.judul, 
-        tb_target.id as idtarget, tb_target.kode_target, tb_target.volume as volumetarget, tb_target.satuan as satuantarget, tb_target.deskripsi,
+        tb_target.id as idtarget, tb_target.kode_target, tb_target.volume as volumetarget, tb_target.satuan as satuantarget,
         tb_output_target.id as idtargetinv, tb_output_target.kode_output_target, tb_output_target.kode_hru, tb_output_target.satuan, tb_output_target.volume,
         tb_outcome_target.id, tb_outcome_target.kode_outcome_target, tb_outcome_target.satuan, tb_outcome_target.volume');
         $data->join('tb_target', 'tb_target.kode_rencana = tb_rencana.kode_rencana');
@@ -32,7 +32,7 @@ class UserGambutSasaranClaim extends BaseController
         $db = \Config\Database::connect();
         $data = $db->table('tb_rencana');
         $data->select('tb_rencana.kode_rencana as koderencana, tb_rencana.id as idrencana,tb_rencana.judul, 
-        tb_target.id as idtarget, tb_target.kode_target, tb_target.volume as volumetarget, tb_target.satuan as satuantarget, tb_target.deskripsi,
+        tb_target.id as idtarget, tb_target.kode_target, tb_target.volume as volumetarget, tb_target.satuan as satuantarget,
         tb_output_target.id as idtargetinv, tb_output_target.kode_output_target, tb_output_target.kode_hru, tb_output_target.satuan, tb_output_target.volume');
         $data->join('tb_target', 'tb_target.kode_rencana = tb_rencana.kode_rencana');
         $data->join('tb_output_target', 'tb_output_target.kode_target = tb_target.kode_target');

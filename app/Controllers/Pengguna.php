@@ -58,7 +58,7 @@ class Pengguna extends BaseController
                     'is_unique' => 'Username sudah tercatat dalam database.'
                 ]
             ],
-            'nama' => [
+            'fullname' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Nama harus diisi.',
@@ -72,7 +72,7 @@ class Pengguna extends BaseController
         $myth->withGroup($this->request->getVar('role'))->save([
             'email' => $this->request->getVar('email'),
             'username' => $this->request->getVar('username'),
-            'fullname' => $this->request->getVar('nama'),
+            'fullname' => $this->request->getVar('fullname'),
             'active' => $this->request->getVar('status'),
             'password_hash' => Password::hash("brgm2023"),
         ]);
@@ -85,7 +85,7 @@ class Pengguna extends BaseController
             'id' => $id,
             'email' => $this->request->getVar('email'),
             'username' => $this->request->getVar('username'),
-            'fullname' => $this->request->getVar('nama'),
+            'fullname' => $this->request->getVar('fullname'),
             'active' => $this->request->getVar('status'),
             'password_hash' => Password::hash("brgm2023"),
         ]);

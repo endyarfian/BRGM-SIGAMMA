@@ -607,12 +607,12 @@
                                             </div>
                                             <br>
                                             <div class="form-group">
-                                                <label for="nama">
+                                                <label for="fullname">
                                                     <p>Masukkan nama pengguna baru.</p>
                                                 </label>
-                                                <input type="text" placeholder="Nama..." class="form-control <?= ($validation->hasError('nama')) ? 'is-invalid' : ''; ?>" id="nama" name="nama" value="<?= old('nama'); ?>">
+                                                <input type="text" placeholder="Nama..." class="form-control <?= ($validation->hasError('fullname')) ? 'is-invalid' : ''; ?>" id="fullname" name="fullname" value="<?= old('fullname'); ?>">
                                                 <div class="invalid-feedback">
-                                                    <?= $validation->getError('nama'); ?>
+                                                    <?= $validation->getError('fullname'); ?>
                                                 </div>
                                             </div>
                                             <br>
@@ -700,10 +700,10 @@
                                                 </div>
                                                 <br>
                                                 <div class="form-group">
-                                                    <label for="nama">
+                                                    <label for="fullname">
                                                         <p>Sunting nama pengguna.</p>
                                                     </label>
-                                                    <input id="nama" type="text" name="nama" value="<?= $var['fullname']; ?>" class="form-control">
+                                                    <input id="fullname" type="text" name="fullname" value="<?= $var['fullname']; ?>" class="form-control">
                                                 </div>
                                                 <br>
                                                 <div class="form-group">

@@ -22,6 +22,6 @@ class GambTargetModel extends Model
         'kode_target',
         'satuan',
         'volume',
-        'deskripsi',
+        'kode_khg',
     ];
 }
